@@ -116,6 +116,46 @@ def check_data() -> None:
     check_privacy("data/public-metrics.json", p.read_text())
 
 
+V2_KEYS = {"schema", "generated_on", "collection", "periods", "monthly", "languages", "definitions"}
+V2_PERIODS = {"7d", "30d", "12m", "all"}
+V2_TEXT = re.compile(r"^[A-Za-z0-9 ,.;:()+/'-]{1,300}$")      # reviewed prose in definitions/collection
+
+
+def check_data_v2() -> None:
+    """cea.public/v2 (optional until the V2 dashboard is integrated): shape, counts, invariants, privacy."""
+    p = ROOT / "data" / "public-metrics-v2.json"
+    if not p.exists():
+        return
+    d = json.loads(p.read_text())
+    if set(d) != V2_KEYS or d.get("schema") != "cea.public/v2" or set(d.get("periods", {})) != V2_PERIODS:
+        err("data/public-metrics-v2.json: unexpected top-level shape")
+        return
+    allowed_str = re.compile(r"^(cea\.public/v2|\d{4}-\d{2}(-\d{2})?|[A-Za-z0-9+#. -]{1,24})$")
+
+    def walk(v, path="$"):
+        if isinstance(v, dict):
+            for k, x in v.items():
+                walk(x, f"{path}.{k}")
+        elif isinstance(v, list):
+            for i, x in enumerate(v):
+                walk(x, f"{path}[{i}]")
+        elif isinstance(v, str):
+            prose = path.startswith(("$.definitions.", "$.collection."))
+            if not (V2_TEXT.match(v) if prose else allowed_str.match(v)):
+                err(f"data/public-metrics-v2.json: unexpected string at {path}")
+        elif isinstance(v, bool) or (isinstance(v, (int, float)) and v < 0):
+            err(f"data/public-metrics-v2.json: invalid value at {path}")
+    walk(d)
+    for name, per in d["periods"].items():
+        s = per["sources"]
+        if s["consolidated"] != s["github_only"] + s["azure_devops_only"] + s["both"] \
+                or per["git"]["owner_authored_shas"] != s["consolidated"]:
+            err(f"data/public-metrics-v2.json: {name} sources do not add up")
+        if per["contributions"]["verified_lower_bound"] > per["contributions"]["eligible_mirrored_commits"]:
+            err(f"data/public-metrics-v2.json: {name} lower bound above eligible")
+    check_privacy("data/public-metrics-v2.json", p.read_text())
+
+
 def check_links(links: list[str]) -> None:
     for url in sorted(set(links)):
         if url.startswith("mailto:"):
@@ -139,6 +179,7 @@ def main() -> int:
     links = check_docs()
     check_assets()
     check_data()
+    check_data_v2()
     if "--links" in sys.argv:
         check_links(links)
     for e in errors:
