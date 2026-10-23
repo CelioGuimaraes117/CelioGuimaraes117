@@ -1,0 +1,136 @@
+{
+  "schema": "cea.public/v1",
+  "generated_on": "2026-10-23",
+  "window": {
+    "from": "2025-11",
+    "to": "2026-10"
+  },
+  "commits": {
+    "github": 699,
+    "azure_devops": 234,
+    "in_both": 0,
+    "consolidated": 933
+  },
+  "monthly": [
+    {
+      "month": "2025-11",
+      "github": 1,
+      "azure_devops": 0,
+      "both": 0
+    },
+    {
+      "month": "2025-12",
+      "github": 14,
+      "azure_devops": 0,
+      "both": 0
+    },
+    {
+      "month": "2026-01",
+      "github": 5,
+      "azure_devops": 0,
+      "both": 0
+    },
+    {
+      "month": "2026-02",
+      "github": 1,
+      "azure_devops": 0,
+      "both": 0
+    },
+    {
+      "month": "2026-03",
+      "github": 3,
+      "azure_devops": 0,
+      "both": 0
+    },
+    {
+      "month": "2026-04",
+      "github": 0,
+      "azure_devops": 0,
+      "both": 0
+    },
+    {
+      "month": "2026-05",
+      "github": 44,
+      "azure_devops": 0,
+      "both": 0
+    },
+    {
+      "month": "2026-06",
+      "github": 408,
+      "azure_devops": 0,
+      "both": 0
+    },
+    {
+      "month": "2026-07",
+      "github": 183,
+      "azure_devops": 0,
+      "both": 0
+    },
+    {
+      "month": "2026-08",
+      "github": 40,
+      "azure_devops": 19,
+      "both": 0
+    },
+    {
+      "month": "2026-09",
+      "github": 0,
+      "azure_devops": 126,
+      "both": 0
+    },
+    {
+      "month": "2026-10",
+      "github": 0,
+      "azure_devops": 89,
+      "both": 0
+    }
+  ],
+  "pull_requests": {
+    "github": {
+      "authored": 125,
+      "merged": 124,
+      "open": 0,
+      "closed_unmerged": 1,
+      "median_hours_to_merge": 0.0,
+      "reviews": 0
+    },
+    "azure_devops": {
+      "authored": 414,
+      "merged": 383,
+      "open": 2,
+      "closed_unmerged": 29,
+      "median_hours_to_merge": 0.8,
+      "reviews": 5
+    }
+  },
+  "languages": [
+    {
+      "name": "TypeScript",
+      "share": 0.7833
+    },
+    {
+      "name": "JavaScript",
+      "share": 0.1387
+    },
+    {
+      "name": "Go",
+      "share": 0.0262
+    },
+    {
+      "name": "PLpgSQL",
+      "share": 0.0185
+    },
+    {
+      "name": "HTML",
+      "share": 0.0151
+    },
+    {
+      "name": "CSS",
+      "share": 0.0089
+    },
+    {
+      "name": "Other",
+      "share": 0.0091
+    }
+  ]
+}
