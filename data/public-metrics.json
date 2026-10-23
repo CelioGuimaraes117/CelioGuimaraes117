@@ -6,10 +6,10 @@
     "to": "2026-10"
   },
   "commits": {
-    "github": 699,
+    "github": 919,
     "azure_devops": 234,
-    "in_both": 0,
-    "consolidated": 933
+    "in_both": 208,
+    "consolidated": 945
   },
   "monthly": [
     {
@@ -56,7 +56,7 @@
     },
     {
       "month": "2026-06",
-      "github": 408,
+      "github": 414,
       "azure_devops": 0,
       "both": 0
     },
@@ -75,14 +75,14 @@
     {
       "month": "2026-09",
       "github": 0,
-      "azure_devops": 126,
-      "both": 0
+      "azure_devops": 7,
+      "both": 119
     },
     {
       "month": "2026-10",
-      "github": 0,
-      "azure_devops": 89,
-      "both": 0
+      "github": 6,
+      "azure_devops": 0,
+      "both": 89
     }
   ],
   "pull_requests": {
@@ -106,31 +106,31 @@
   "languages": [
     {
       "name": "TypeScript",
-      "share": 0.7833
+      "share": 0.8427
     },
     {
       "name": "JavaScript",
-      "share": 0.1387
+      "share": 0.0839
     },
     {
-      "name": "Go",
-      "share": 0.0262
+      "name": "Python",
+      "share": 0.0275
     },
     {
       "name": "PLpgSQL",
-      "share": 0.0185
+      "share": 0.014
+    },
+    {
+      "name": "Go",
+      "share": 0.0105
     },
     {
       "name": "HTML",
-      "share": 0.0151
-    },
-    {
-      "name": "CSS",
-      "share": 0.0089
+      "share": 0.0061
     },
     {
       "name": "Other",
-      "share": 0.0091
+      "share": 0.0154
     }
   ]
 }
