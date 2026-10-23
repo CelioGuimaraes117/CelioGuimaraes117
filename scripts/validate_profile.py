@@ -118,7 +118,7 @@ def check_data() -> None:
 
 V2_KEYS = {"schema", "generated_on", "collection", "periods", "monthly", "languages", "definitions"}
 V2_PERIODS = {"7d", "30d", "12m", "all"}
-V2_TEXT = re.compile(r"^[A-Za-z0-9 ,.;:()+/'-]{1,300}$")      # reviewed prose in definitions/collection
+V2_TEXT = re.compile(r"^[A-Za-z0-9_ ,.;:()+/'-]{1,300}$")      # reviewed prose in definitions/collection
 
 
 def check_data_v2() -> None:
