@@ -21,7 +21,7 @@ the remainder comes from three other contributors and an automation identity.
 
 - I defined the domain model, the architecture decisions (13 ADRs, a 22-entry decision log) and the acceptance criteria.
 - I set the engineering controls that every change had to pass: one mandatory PR gate, migration policy, security-boundary tests.
-- Development used AI-assisted tooling under my specification, review and merge control; every change was independently reviewed before merge.
+- Every change reaches `main` only through a pull request that must pass the blocking validation pipeline, is linked to a work item and is squash-merged.
 - I owned every merge and signed off the technical, product and operations go-live approvals.
 
 ## Architecture

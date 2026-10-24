@@ -21,7 +21,7 @@ o restante vem de outros três colaboradores e de uma identidade de automação.
 
 - Defini o modelo de domínio, as decisões de arquitetura (13 ADRs e um registro de 22 decisões) e os critérios de aceite.
 - Estabeleci os controles de engenharia que toda mudança precisava passar: um gate de PR obrigatório, política de migrations e testes de fronteira de segurança.
-- O desenvolvimento usou ferramentas assistidas por IA sob minha especificação, revisão e controle de merge; toda mudança passou por revisão independente antes do merge.
+- Toda mudança chega à `main` apenas por pull request, que precisa passar no pipeline de validação bloqueante, ser vinculado a um work item e ser integrado por squash.
 - Assumi cada merge e as aprovações técnica, de produto e de operações para o go-live.
 
 ## Arquitetura

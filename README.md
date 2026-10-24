@@ -36,7 +36,7 @@ Apple Watch and iPhone clients talk to a private AI gateway that owns device ide
 
 ### 03 · Engineering platform — DevOps intelligence &nbsp;<sub><code>OPERATIONAL</code></sub>
 
-Most of my work lives in private Azure DevOps repositories. This platform makes it visible **without falsifying anything**: a full-history inventory, a fail-closed secret-scanning gate, a one-way fast-forward-only private mirror that keeps every SHA, author and date, and a collector that deduplicates by SHA and publishes only aggregates through a strict schema. It produces the numbers below. → [Read the case](cases/engineering-platform.en.md)
+Most of my work lives in private Azure DevOps repositories. This platform makes it visible **without falsifying anything**: a full-history inventory, a fail-closed secret-scanning gate, a one-way fast-forward-only private mirror that keeps the SHA, author and date of every authorized commit it mirrors (security-excluded commits are never mirrored), and a collector that deduplicates by SHA and publishes only aggregates through a strict schema. It produces the numbers below. → [Read the case](cases/engineering-platform.en.md)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/cases/engineering-platform-dark.svg">

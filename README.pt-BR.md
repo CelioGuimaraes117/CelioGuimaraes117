@@ -36,7 +36,7 @@ Clientes Apple Watch e iPhone conversam com um gateway de IA privado que concent
 
 ### 03 · Plataforma de engenharia — DevOps intelligence &nbsp;<sub><code>OPERACIONAL</code></sub>
 
-A maior parte do meu trabalho vive em repositórios privados no Azure DevOps. Esta plataforma o torna visível **sem falsificar nada**: inventário de todo o histórico, um gate de varredura de segredos que falha fechado, um espelho privado unidirecional só por fast-forward que preserva cada SHA, autor e data, e um coletor que deduplica por SHA e publica apenas agregados com schema estrito. É a origem dos números abaixo. → [Ler o case](cases/engineering-platform.pt-BR.md)
+A maior parte do meu trabalho vive em repositórios privados no Azure DevOps. Esta plataforma o torna visível **sem falsificar nada**: inventário de todo o histórico, um gate de varredura de segredos que falha fechado, um espelho privado unidirecional só por fast-forward que preserva SHA, autor e data de cada commit autorizado que espelha (commits excluídos por segurança nunca são espelhados), e um coletor que deduplica por SHA e publica apenas agregados com schema estrito. É a origem dos números abaixo. → [Ler o case](cases/engineering-platform.pt-BR.md)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/cases/engineering-platform-dark.svg">
