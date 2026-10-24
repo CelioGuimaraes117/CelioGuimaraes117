@@ -52,7 +52,7 @@ Azure DevOps
 - **Least-privilege tokens per job.** Each job gets its own fine-grained, time-limited token restricted to what it needs. Tokens never appear in URLs, arguments, configuration or logs, and every log record is redacted.
 - **Health checks and alerts.** Each mirror is classified (in sync, pending, stale, diverged, missing, not private). Any problem opens or updates a private alert; only a healthy run closes it. Inconclusive checks never close an alert.
 - **Cost-aware scheduling.** Reconciliation runs on a fixed interval, with per-job timeouts that bound worst-case runner usage and separate kill switches for mirroring and metrics. Private code is cloned fresh per run, with no shared cache.
-- **Independent AI audit.** Secret-scanning exceptions were reviewed by an independent AI reviewer. Changing the pinned scanner-configuration hash is the approval act and must be accompanied by an independent review.
+- **Independent review.** Secret-scanning exceptions are recorded one by one with a justification and reviewed independently before they take effect; the scanner configuration is pinned by hash, so any change to it is explicit.
 
 ## Decisions and trade-offs
 

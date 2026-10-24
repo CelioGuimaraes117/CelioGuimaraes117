@@ -63,7 +63,6 @@ Decisions are recorded in **13 ADRs and a 22-entry decision log**. The main ones
 - **"Merged is not homologated."** Partner integrations are merged in an inert state and are enabled only after partner certification.
 - **A small environment topology** sized to a fixed monthly budget.
 - **One PR gate instead of four.** Partly driven by limited CI concurrency.
-- **No mandatory second human reviewer.** A conscious choice while the team is one engineer; the mandatory PR gate remains the enforced quality bar for every change.
 
 ## Engineering practices
 
@@ -111,7 +110,6 @@ I do not publish usage, revenue or growth figures. When this was written, the fo
 - **Domain-first contracts pay off.** Combined with mock-to-API switching, they let product work run ahead of the backend without rework.
 - **Merged, released and enabled are different states.** Flags let unfinished work land without being exposed.
 - **Give migrations one authority.** That takes the riskiest step of a release out of the application.
-- **Instrument every platform before launch.** Mobile crash telemetry was not equally complete on both platforms at launch.
 - **State the bus factor openly.** A one-engineer model depends on written decisions and runbooks.
 
 ## What is intentionally not shown

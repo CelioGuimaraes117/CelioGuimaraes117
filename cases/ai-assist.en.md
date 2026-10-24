@@ -65,7 +65,7 @@ Cross-cutting concerns:
 
 - **14 ADRs**, from native Apple and the private gateway to credential policy, per-device identity, and provider activation and budget.
 - **Test battery.** One local script runs every suite, with database tests on ephemeral PostgreSQL clusters. A network lock blocks outbound calls during tests.
-- **Independent AI review.** A separate AI model reviewed the work over several rounds; the final, static re-verification returned "approved with non-blocking reservations".
+- **Independent review rounds.** The work was reviewed independently over several rounds; the final, static re-verification closed with non-blocking reservations, recorded in the residual-risk register.
 - **Security tooling.** Secret scanning, static analysis with 22 tested custom rules, dependency audit and an offline supply-chain check.
 
 ## Results

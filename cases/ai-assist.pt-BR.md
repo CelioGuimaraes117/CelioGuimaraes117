@@ -65,7 +65,7 @@ Preocupações transversais:
 
 - **14 ADRs**, de Apple nativo e gateway privado a política de credenciais e ativação de provedores.
 - **Bateria de testes.** Um script local roda todas as suítes, com testes de banco em clusters PostgreSQL efêmeros. Uma trava de rede bloqueia chamadas de saída durante os testes.
-- **Revisão independente por IA.** Um modelo de IA separado revisou o trabalho em várias rodadas; a reverificação final, estática, resultou em "aprovado com ressalvas não bloqueantes".
+- **Rodadas de revisão independente.** O trabalho foi revisado de forma independente em várias rodadas; a reverificação final, estática, terminou com ressalvas não bloqueantes, registradas no registro de riscos residuais.
 - **Ferramentas de segurança.** Varredura de segredos, análise estática com 22 regras próprias testadas, auditoria de dependências e checagem offline de cadeia de suprimentos.
 
 ## Resultados
@@ -111,7 +111,7 @@ Uma jornada de UI conjunta rodou os dois simuladores contra um gateway local rea
 - Sem avaliações de LLM; apenas testes determinísticos e offline de prompt injection.
 - Sem CI; a bateria roda localmente.
 - Aceite em dispositivos físicos pendente.
-- O infra-lab (autenticação de provedor sem chave, circuit breaker, rate limiting por provedor, custo exato) é uma cópia de laboratório separada, ainda não reconciliada com a linha principal,, sem execução de testes registrada após as mudanças.
+- O infra-lab (autenticação de provedor sem chave, circuit breaker, rate limiting por provedor, custo exato) é uma cópia de laboratório separada, ainda não reconciliada com a linha principal, sem execução de testes registrada após as mudanças.
 - Os riscos residuais ficam num registro próprio e precisam ser revisados de novo antes de qualquer implantação remota.
 
 ## Lições aprendidas

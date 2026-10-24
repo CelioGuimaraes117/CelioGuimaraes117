@@ -63,7 +63,6 @@ As decisões estão registradas em **13 ADRs e num log de 22 decisões**. As pri
 - **"Mergeado não é homologado."** As integrações com parceiros entram inertes e só são ativadas depois da certificação do parceiro.
 - **Uma topologia de ambientes enxuta**, dimensionada para um teto de orçamento mensal fixo.
 - **Um gate de PR em vez de quatro.** Motivado em parte pela concorrência limitada do CI.
-- **Sem segundo revisor humano obrigatório.** Uma escolha consciente enquanto o time é um único engenheiro; o gate de PR obrigatório continua sendo a régua de qualidade aplicada a toda mudança.
 
 ## Práticas de engenharia
 
@@ -111,7 +110,6 @@ Não publico números de uso, receita ou crescimento. Quando este texto foi escr
 - **Contratos a partir do domínio compensam.** Junto com a troca de mocks pela API real, eles deixaram o produto avançar antes do backend, sem retrabalho.
 - **Mergeado, publicado e ativado são estados diferentes.** As flags permitem integrar trabalho inacabado sem expô-lo.
 - **Migrações precisam de uma única autoridade.** Isso tira da aplicação o passo mais arriscado de um release.
-- **Instrumente todas as plataformas antes do lançamento.** No lançamento, a telemetria de crashes não estava igualmente completa nas duas plataformas mobile.
 - **Assuma o bus factor abertamente.** Um modelo com um único engenheiro depende de decisões e runbooks escritos.
 
 ## O que intencionalmente não é mostrado

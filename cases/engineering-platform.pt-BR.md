@@ -52,7 +52,7 @@ Azure DevOps
 - **Tokens de menor privilégio por job.** Cada job recebe seu próprio token granular, com validade limitada e restrito ao que precisa. Tokens nunca aparecem em URLs, argumentos, configuração ou logs, e todo registro de log passa por redação.
 - **Health checks e alertas.** Cada espelho é classificado (sincronizado, pendente, defasado, divergente, ausente, não privado). Qualquer problema abre ou atualiza um alerta privado; só uma execução saudável o fecha. Verificações inconclusivas nunca fecham alertas.
 - **Agendamento consciente de custo.** A reconciliação roda em intervalo fixo, com timeouts por job que limitam o pior caso de uso de runners e kill switches separados para espelhamento e métricas. Código privado é clonado do zero a cada execução, sem cache compartilhado.
-- **Auditoria independente por IA.** As exceções de varredura de segredos foram revisadas por um revisor de IA independente. Alterar o hash fixado da configuração do scanner é o próprio ato de aprovação e exige revisão independente.
+- **Revisão independente.** As exceções da varredura de segredos são registradas uma a uma, com justificativa, e revisadas de forma independente antes de valer; a configuração do scanner é fixada por hash, então qualquer mudança nela é explícita.
 
 ## Decisões e trade-offs
 
