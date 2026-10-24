@@ -97,7 +97,7 @@ Most of my work lives in private Azure DevOps repositories. This platform makes 
 
 ## Contact
 
-[LinkedIn](https://www.linkedin.com/in/celioguimaraes117) · [celio@includlab.com.br](mailto:celio@includlab.com.br) · [Includlab](https://includlab.com.br) · [Links](https://linktr.ee/celio_rguimaraes)
+[Portfolio](https://www.celiocrisologo.com.br/en) · [LinkedIn](https://www.linkedin.com/in/celioguimaraes117) · [celio@includlab.com.br](mailto:celio@includlab.com.br) · [Includlab](https://includlab.com.br) · [Links](https://linktr.ee/celio_rguimaraes)
 
 Based in Brazil · working remotely · Portuguese, English, Spanish.
 
