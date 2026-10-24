@@ -21,13 +21,13 @@ Dono, arquiteto e engenheiro do projeto: escopo, arquitetura, os 14 ADRs, implem
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../assets/cases/ai-assist-architecture-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="../assets/cases/ai-assist-architecture-light.svg">
-  <img alt="AI-Assist architecture and real status: watch and phone clients, private AI gateway, model router without silent fallback, mock adapter active, Anthropic and OpenAI adapters ready but never called, infrastructure lab kept in a separate copy." src="../assets/cases/ai-assist-architecture-dark.svg" width="100%">
+  <img alt="Arquitetura e estado real do AI-Assist: clientes de relógio e telefone, gateway de IA privado, roteador de modelos sem fallback silencioso, adaptador simulado ativo, adaptadores Anthropic e OpenAI prontos mas nunca chamados, laboratório de infraestrutura mantido em cópia separada." src="../assets/cases/ai-assist-architecture-dark.svg" width="100%">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../assets/cases/ai-assist-flow-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="../assets/cases/ai-assist-flow-light.svg">
-  <img alt="AI-Assist request and response sequence in seven steps from the device through the gateway, router and adapter to a simulated provider and back, with sanitized log events." src="../assets/cases/ai-assist-flow-dark.svg" width="100%">
+  <img alt="Sequência de requisição e resposta do AI-Assist em sete passos, do dispositivo ao gateway, roteador e adaptador até um provedor simulado e de volta, com eventos de log sanitizados." src="../assets/cases/ai-assist-flow-dark.svg" width="100%">
 </picture>
 
 
@@ -73,7 +73,7 @@ Preocupações transversais:
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../assets/cases/ai-assist-evidence-dark.png">
   <source media="(prefers-color-scheme: light)" srcset="../assets/cases/ai-assist-evidence-light.png">
-  <img alt="Simulator screenshots: Apple Watch and iPhone conversations whose answers are labelled simulated, and the budget screen with the kill switch and refusal of unknown costs." src="../assets/cases/ai-assist-evidence-dark.png" width="100%">
+  <img alt="Capturas do simulador: conversas no Apple Watch e no iPhone com respostas marcadas como simuladas e a tela de orçamento com o kill switch e a recusa de custos desconhecidos." src="../assets/cases/ai-assist-evidence-dark.png" width="100%">
 </picture>
 
 

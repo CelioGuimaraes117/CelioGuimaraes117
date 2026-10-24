@@ -10,7 +10,7 @@ Jiu-jitsu academies run on recurring classes, attendance, belt progression and f
 
 - **Many roles, one dataset.** Students, professors, managers, reception staff and platform operators each need different access. That access depends on which unit they are acting in.
 - **Minors' data.** Guardianship, supervised accounts and the transition to adulthood have to be modelled explicitly and handled with care.
-- **One engineer.** The safety net had to be automated and enforced, not left to convention.
+- **Quality that does not depend on memory.** The safety net had to be automated and enforced, not left to convention.
 - **A real launch.** Store review, production infrastructure, migrations and hypercare all had to work on a fixed go-live date in October 2026.
 
 ## My role
@@ -62,7 +62,7 @@ Decisions are recorded in **13 ADRs and a 22-entry decision log**. The main ones
 - **"No invented data."** Undecided business values appear as explicit *not configured* states, not plausible defaults.
 - **"Merged is not homologated."** Partner integrations are merged in an inert state and are enabled only after partner certification.
 - **A small environment topology** sized to a fixed monthly budget.
-- **One PR gate instead of four.** Partly driven by limited CI concurrency.
+- **One PR gate instead of four.** One place where the quality bar is defined and enforced.
 
 ## Engineering practices
 
@@ -105,12 +105,11 @@ I do not publish usage, revenue or growth figures. When this was written, the fo
 
 ## Lessons learned
 
-- **An enforced gate beats conventions.** With a small team, the quality bar has to live in automation, not in memory.
+- **An enforced gate beats conventions.** The quality bar has to live in automation, not in memory.
 - **Parallel work needs isolation and one integrator.** A "one writer at a time" rule keeps reconciliation from eating the speed gain.
 - **Domain-first contracts pay off.** Combined with mock-to-API switching, they let product work run ahead of the backend without rework.
 - **Merged, released and enabled are different states.** Flags let unfinished work land without being exposed.
 - **Give migrations one authority.** That takes the riskiest step of a release out of the application.
-- **State the bus factor openly.** A one-engineer model depends on written decisions and runbooks.
 
 ## What is intentionally not shown
 

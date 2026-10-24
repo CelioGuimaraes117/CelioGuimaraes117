@@ -10,7 +10,7 @@ Academias de jiu-jitsu vivem de aulas recorrentes, frequência, progressão de f
 
 - **Muitos papéis, uma única base de dados.** Alunos, professores, gestores, recepção e operadores da plataforma precisam de acessos diferentes. O acesso depende da unidade em que a pessoa está atuando.
 - **Dados de menores.** Responsáveis legais, contas supervisionadas e a transição para a maioridade precisam ser modelados de forma explícita e tratados com cuidado.
-- **Um único engenheiro.** A rede de segurança precisava ser automatizada e obrigatória, e não depender de convenção.
+- **Qualidade que não depende de memória.** A rede de segurança precisava ser automatizada e obrigatória, e não depender de convenção.
 - **Um lançamento real.** Revisão das lojas, infraestrutura de produção, migrações e hypercare precisavam funcionar numa data fixa de go-live, em outubro de 2026.
 
 ## Meu papel
@@ -29,7 +29,7 @@ o restante vem de outros três colaboradores e de uma identidade de automação.
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../assets/cases/athrya-architecture-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="../assets/cases/athrya-architecture-light.svg">
-  <img alt="Athrya architecture: mobile app, portal, platform admin and invite landing in production, dashboard in development; shared packages; API as the single authorization authority; managed PostgreSQL; delivery from PR gate to promote or rollback." src="../assets/cases/athrya-architecture-dark.svg" width="100%">
+  <img alt="Arquitetura do Athrya: app mobile, portal, platform admin e landing de convite em produção, dashboard em desenvolvimento; pacotes compartilhados; API como única autoridade de autorização; PostgreSQL gerenciado; entrega do gate de PR ao promote ou rollback." src="../assets/cases/athrya-architecture-dark.svg" width="100%">
 </picture>
 
 
@@ -62,7 +62,7 @@ As decisões estão registradas em **13 ADRs e num log de 22 decisões**. As pri
 - **"Nenhum dado inventado."** Valores de negócio ainda não decididos aparecem como estados explícitos de *não configurado*, e não como padrões plausíveis.
 - **"Mergeado não é homologado."** As integrações com parceiros entram inertes e só são ativadas depois da certificação do parceiro.
 - **Uma topologia de ambientes enxuta**, dimensionada para um teto de orçamento mensal fixo.
-- **Um gate de PR em vez de quatro.** Motivado em parte pela concorrência limitada do CI.
+- **Um gate de PR em vez de quatro.** Um único lugar onde a régua de qualidade é definida e aplicada.
 
 ## Práticas de engenharia
 
@@ -105,12 +105,11 @@ Não publico números de uso, receita ou crescimento. Quando este texto foi escr
 
 ## Lições aprendidas
 
-- **Um gate automatizado vale mais que convenções.** Com um time pequeno, a régua de qualidade precisa estar na automação, não na memória.
+- **Um gate automatizado vale mais que convenções.** A régua de qualidade precisa estar na automação, não na memória.
 - **Trabalho em paralelo precisa de isolamento e de um integrador.** Uma regra de "um escritor por vez" evita que a reconciliação consuma o ganho de velocidade.
 - **Contratos a partir do domínio compensam.** Junto com a troca de mocks pela API real, eles deixaram o produto avançar antes do backend, sem retrabalho.
 - **Mergeado, publicado e ativado são estados diferentes.** As flags permitem integrar trabalho inacabado sem expô-lo.
 - **Migrações precisam de uma única autoridade.** Isso tira da aplicação o passo mais arriscado de um release.
-- **Assuma o bus factor abertamente.** Um modelo com um único engenheiro depende de decisões e runbooks escritos.
 
 ## O que intencionalmente não é mostrado
 

@@ -63,7 +63,7 @@ Azure DevOps
 
 ## Results
 
-- **3,414** commits inventoried, **0** unrecoverable.
+- **3,414** commits inventoried in the Azure DevOps source (all authors, full history, October 2026 inventory), **0** unrecoverable.
 - **More than 4,300** unique commits attributed to my Git identities, consolidated across platforms (all history to October 2026, de-duplicated by SHA; the live figure is on the dashboard).
 - Eligible default-branch commits for official GitHub contributions, and how many the calendar does not show yet, are reported on the dashboard.
 - **150+** automated tests.

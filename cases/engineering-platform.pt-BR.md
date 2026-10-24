@@ -23,7 +23,7 @@ Desenho e implementação da plataforma de ponta a ponta: inventário, validaç�
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../assets/cases/engineering-platform-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="../assets/cases/engineering-platform-light.svg">
-  <img alt="Engineering platform pipeline from Azure DevOps through inventory, security gate, private mirror, collector and public JSON to the profile, with cross-cutting controls." src="../assets/cases/engineering-platform-dark.svg" width="100%">
+  <img alt="Pipeline da plataforma de engenharia, do Azure DevOps ao inventário, gate de segurança, espelho privado, coletor e JSON público até o perfil, com controles transversais." src="../assets/cases/engineering-platform-dark.svg" width="100%">
 </picture>
 
 
@@ -63,7 +63,7 @@ Azure DevOps
 
 ## Resultados
 
-- **3.414** commits inventariados, **0** irrecuperáveis.
+- **3.414** commits inventariados na origem Azure DevOps (todos os autores, histórico completo, inventário de outubro de 2026), **0** irrecuperáveis.
 - **Mais de 4.300** commits únicos atribuídos às minhas identidades Git, consolidados entre plataformas (todo o histórico até outubro de 2026, deduplicados por SHA; o número vivo está no dashboard).
 - Os commits elegíveis na branch padrão para contribuições oficiais do GitHub, e quantos o calendário ainda não mostra, estão no dashboard.
 - **Mais de 150** testes automatizados.
