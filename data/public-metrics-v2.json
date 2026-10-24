@@ -10,20 +10,20 @@
   "periods": {
     "7d": {
       "git": {
-        "owner_authored_shas": 253,
-        "owner_committed_shas": 252,
-        "default_branch_shas": 56,
-        "other_live_branch_only_shas": 120,
+        "owner_authored_shas": 255,
+        "owner_committed_shas": 254,
+        "default_branch_shas": 57,
+        "other_live_branch_only_shas": 121,
         "deleted_branch_recovered_shas": 77,
         "pr_shas": 105,
         "merge_commit_shas": 69,
         "unrecoverable_shas": 0
       },
       "sources": {
-        "github_only": 39,
-        "azure_devops_only": 21,
-        "both": 193,
-        "consolidated": 253
+        "github_only": 40,
+        "azure_devops_only": 0,
+        "both": 215,
+        "consolidated": 255
       },
       "delivery": {
         "prs_created": 19,
@@ -35,28 +35,28 @@
         "median_hours_to_merge": 2.4
       },
       "contributions": {
-        "official_total": 59,
-        "eligible_mirrored_commits": 17,
-        "calendar_upper_bound": 17,
+        "official_total": 61,
+        "eligible_mirrored_commits": 18,
+        "calendar_upper_bound": 18,
         "pending_on_calendar": 0
       }
     },
     "30d": {
       "git": {
-        "owner_authored_shas": 1896,
-        "owner_committed_shas": 1895,
-        "default_branch_shas": 183,
-        "other_live_branch_only_shas": 541,
+        "owner_authored_shas": 1898,
+        "owner_committed_shas": 1897,
+        "default_branch_shas": 184,
+        "other_live_branch_only_shas": 542,
         "deleted_branch_recovered_shas": 1172,
         "pr_shas": 1122,
         "merge_commit_shas": 560,
         "unrecoverable_shas": 0
       },
       "sources": {
-        "github_only": 39,
-        "azure_devops_only": 21,
-        "both": 1836,
-        "consolidated": 1896
+        "github_only": 40,
+        "azure_devops_only": 0,
+        "both": 1858,
+        "consolidated": 1898
       },
       "delivery": {
         "prs_created": 153,
@@ -68,28 +68,28 @@
         "median_hours_to_merge": 1.6
       },
       "contributions": {
-        "official_total": 186,
-        "eligible_mirrored_commits": 144,
-        "calendar_upper_bound": 144,
+        "official_total": 188,
+        "eligible_mirrored_commits": 145,
+        "calendar_upper_bound": 145,
         "pending_on_calendar": 0
       }
     },
     "12m": {
       "git": {
-        "owner_authored_shas": 4275,
-        "owner_committed_shas": 4084,
-        "default_branch_shas": 985,
-        "other_live_branch_only_shas": 841,
+        "owner_authored_shas": 4277,
+        "owner_committed_shas": 4086,
+        "default_branch_shas": 986,
+        "other_live_branch_only_shas": 842,
         "deleted_branch_recovered_shas": 2449,
         "pr_shas": 2165,
         "merge_commit_shas": 1078,
         "unrecoverable_shas": 0
       },
       "sources": {
-        "github_only": 867,
-        "azure_devops_only": 22,
-        "both": 3386,
-        "consolidated": 4275
+        "github_only": 868,
+        "azure_devops_only": 1,
+        "both": 3408,
+        "consolidated": 4277
       },
       "delivery": {
         "prs_created": 535,
@@ -101,28 +101,28 @@
         "median_hours_to_merge": 0.5
       },
       "contributions": {
-        "official_total": 1073,
-        "eligible_mirrored_commits": 235,
-        "calendar_upper_bound": 211,
+        "official_total": 1116,
+        "eligible_mirrored_commits": 236,
+        "calendar_upper_bound": 212,
         "pending_on_calendar": 24
       }
     },
     "all": {
       "git": {
-        "owner_authored_shas": 4318,
-        "owner_committed_shas": 4084,
-        "default_branch_shas": 1027,
-        "other_live_branch_only_shas": 842,
+        "owner_authored_shas": 4320,
+        "owner_committed_shas": 4086,
+        "default_branch_shas": 1028,
+        "other_live_branch_only_shas": 843,
         "deleted_branch_recovered_shas": 2449,
         "pr_shas": 2165,
         "merge_commit_shas": 1078,
         "unrecoverable_shas": 0
       },
       "sources": {
-        "github_only": 910,
-        "azure_devops_only": 22,
-        "both": 3386,
-        "consolidated": 4318
+        "github_only": 911,
+        "azure_devops_only": 1,
+        "both": 3408,
+        "consolidated": 4320
       },
       "delivery": {
         "prs_created": 536,
@@ -134,9 +134,9 @@
         "median_hours_to_merge": 0.5
       },
       "contributions": {
-        "official_total": 1130,
-        "eligible_mirrored_commits": 235,
-        "calendar_upper_bound": 211,
+        "official_total": 1176,
+        "eligible_mirrored_commits": 236,
+        "calendar_upper_bound": 212,
         "pending_on_calendar": 24
       }
     }
@@ -199,14 +199,14 @@
     },
     {
       "month": "2026-10",
-      "default_branch": 129,
-      "other_refs": 1194
+      "default_branch": 130,
+      "other_refs": 1195
     }
   ],
   "languages": [
     {
       "name": "TypeScript",
-      "share": 0.8399
+      "share": 0.84
     },
     {
       "name": "JavaScript",
@@ -214,7 +214,7 @@
     },
     {
       "name": "Python",
-      "share": 0.0308
+      "share": 0.0307
     },
     {
       "name": "PLpgSQL",
@@ -234,8 +234,8 @@
     }
   ],
   "definitions": {
-    "git.owner_authored_shas": "Unique commit SHAs authored by the owner, in every accessible ref of every source (default and other branches, PR iterations, deleted branches recovered by id), counted once.",
-    "git.owner_committed_shas": "Unique SHAs whose committer is the owner (includes squash commits created by Azure DevOps on completion).",
+    "git.owner_authored_shas": "Unique commit SHAs whose Git author is one of the owner's verified identities, in every accessible ref of every source (default and other branches, PR iterations, deleted branches recovered by id), counted once. Repository activity, not manually written lines or individual productivity.",
+    "git.owner_committed_shas": "Unique SHAs whose Git committer is one of the owner's identities (includes squash commits created by Azure DevOps on completion).",
     "git.default_branch_shas": "Owner-authored SHAs reachable from a default branch.",
     "git.other_live_branch_only_shas": "Owner-authored SHAs only on live non-default branches.",
     "git.deleted_branch_recovered_shas": "Owner-authored SHAs no longer on any branch, recovered by id from Azure DevOps.",
