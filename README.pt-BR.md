@@ -1,7 +1,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/banners/hero-animated-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/banners/hero-animated-light.svg">
-  <img alt="Célio Crisólogo — Software Architect, Tech Lead, Applied AI Engineering. I architect systems. I build products. I engineer intelligence." src="assets/banners/hero-animated-dark.svg" width="100%">
+  <img alt="Célio Crisólogo — Arquiteto de Software, Tech Lead, Engenharia de IA Aplicada. Arquiteto sistemas. Construo produtos. Projeto inteligência." src="assets/banners/hero-animated-dark.svg" width="100%">
 </picture>
 
 <p align="right"><sub><a href="README.md">English</a></sub></p>
@@ -89,11 +89,11 @@ A maior parte do meu trabalho vive em repositórios privados no Azure DevOps. Es
 
 ## Tecnologia e liderança
 
-**Arquitetura** fronteiras orientadas a domínio · integração orientada a eventos · modernização de legado · registros de decisão
-**Backend** Java · Go · TypeScript/Node.js (NestJS) · Python · PostgreSQL · Kafka · Redis
-**Plataforma** Azure · AWS · Kubernetes · Docker · Bicep/Terraform · Azure DevOps · GitHub Actions
-**IA aplicada** gateways de LLM · roteamento multi-provedor · salvaguardas de custo e segurança · desenho de avaliações
-**Liderança** padrões de engenharia · quality gates · governança de release · mentoria e contratação
+- **Arquitetura** fronteiras orientadas a domínio · integração orientada a eventos · modernização de legado · registros de decisão
+- **Backend** Java · Go · TypeScript/Node.js (NestJS) · Python · PostgreSQL · Kafka · Redis
+- **Plataforma** Azure · AWS · Kubernetes · Docker · Bicep/Terraform · Azure DevOps · GitHub Actions
+- **IA aplicada** gateways de LLM · roteamento multi-provedor · salvaguardas de custo e segurança · desenho de avaliações
+- **Liderança** padrões de engenharia · quality gates · governança de release · mentoria e contratação
 
 ## Contato
 

@@ -93,15 +93,15 @@ Não publico números de uso, receita ou crescimento. Quando este texto foi escr
 
 | Componente | Status | Tipo de evidência |
 |---|---|---|
-| App mobile (iOS / Android) | Production | Páginas na App Store e no Google Play |
-| API | Production | Pipeline de deploy com revisão em etapas e promoção |
-| Portal | Production | Host no ar e pipeline de deploy |
-| Platform Admin | Production | Pipeline de deploy com aprovação |
-| Landing de convite | Production | Pipeline de deploy |
-| Dashboard | In development | Apenas repositório; não publicado |
-| Cobrança da academia | In development (construída, atrás de feature flags) | Código mergeado; ativação em produção não verificada |
-| Integrações com parceiros de benefícios | In development | Mergeadas inertes; não homologadas |
-| Protótipo separado de plataforma de treinamento | In development (pausado) | Repositório anterior; sem evidência de deploy |
+| App mobile (iOS / Android) | Produção | Páginas na App Store e no Google Play |
+| API | Produção | Pipeline de deploy com revisão em etapas e promoção |
+| Portal | Produção | Host no ar e pipeline de deploy |
+| Platform Admin | Produção | Pipeline de deploy com aprovação |
+| Landing de convite | Produção | Pipeline de deploy |
+| Dashboard | Em desenvolvimento | Apenas repositório; não publicado |
+| Cobrança da academia | Em desenvolvimento (construída, atrás de feature flags) | Código mergeado; ativação em produção não verificada |
+| Integrações com parceiros de benefícios | Em desenvolvimento | Mergeadas inertes; não homologadas |
+| Protótipo separado de plataforma de treinamento | Em desenvolvimento (pausado) | Repositório anterior; sem evidência de deploy |
 
 ## Lições aprendidas
 

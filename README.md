@@ -89,11 +89,11 @@ Most of my work lives in private Azure DevOps repositories. This platform makes 
 
 ## Technology & leadership
 
-**Architecture** domain-driven boundaries · event-driven integration · legacy modernization · decision records
-**Backend** Java · Go · TypeScript/Node.js (NestJS) · Python · PostgreSQL · Kafka · Redis
-**Platform** Azure · AWS · Kubernetes · Docker · Bicep/Terraform · Azure DevOps · GitHub Actions
-**Applied AI** LLM gateways · multi-provider routing · cost and safety guardrails · evaluation design
-**Leadership** engineering standards · quality gates · release governance · mentoring and hiring
+- **Architecture** domain-driven boundaries · event-driven integration · legacy modernization · decision records
+- **Backend** Java · Go · TypeScript/Node.js (NestJS) · Python · PostgreSQL · Kafka · Redis
+- **Platform** Azure · AWS · Kubernetes · Docker · Bicep/Terraform · Azure DevOps · GitHub Actions
+- **Applied AI** LLM gateways · multi-provider routing · cost and safety guardrails · evaluation design
+- **Leadership** engineering standards · quality gates · release governance · mentoring and hiring
 
 ## Contact
 
