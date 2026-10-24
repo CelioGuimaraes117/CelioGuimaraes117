@@ -1,6 +1,6 @@
 # Engineering Platform: representar trabalho privado sem falsificá-lo
 
-<p align="right"><sub><a href="engineering-platform.en.md">English</a></sub></p>
+<p align="right"><a href="engineering-platform.en.md">English</a> | <b>Português (Brasil)</b></p>
 ## Contexto
 
 A maior parte da minha engenharia acontece em repositórios privados do Azure DevOps. Um perfil do GitHub mostra apenas o que o GitHub enxerga, então esses commits, pull requests e revisões ficavam invisíveis ali. Copiar código, reescrever histórico ou trocar a autoria de commits distorceria o trabalho.
@@ -21,9 +21,9 @@ Desenho e implementação da plataforma de ponta a ponta: inventário, validaç�
 ## Arquitetura
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="../assets/cases/engineering-platform-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="../assets/cases/engineering-platform-light.svg">
-  <img alt="Pipeline da plataforma de engenharia, do Azure DevOps ao inventário, gate de segurança, espelho privado, coletor e JSON público até o perfil, com controles transversais." src="../assets/cases/engineering-platform-dark.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="../assets/cases/engineering-platform-pt-BR-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="../assets/cases/engineering-platform-pt-BR-light.svg">
+  <img alt="Pipeline da plataforma de engenharia, do Azure DevOps ao inventário, gate de segurança, espelho privado, coletor e JSON público até o perfil, com controles transversais." src="../assets/cases/engineering-platform-pt-BR-dark.svg" width="100%">
 </picture>
 
 

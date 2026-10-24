@@ -163,6 +163,55 @@ def check_data_v2() -> None:
     check_privacy("data/public-metrics-v2.json", p.read_text())
 
 
+def _numbers_in_desc(svg: str) -> list[str]:
+    m = re.search(r"<desc[^>]*>(.*?)</desc>", svg, re.S)
+    nums = re.findall(r"\d[\d.,]*\d|\d", m.group(1) if m else "")
+    return [n.replace(",", "").replace(".", "") for n in nums if not re.fullmatch(r"\d{4}-\d{2}", n)]
+
+
+def check_i18n() -> None:
+    """English is the default (README.md); Portuguese (README.pt-BR.md) must mirror it in structure and data."""
+    en, pt = (ROOT / "README.md").read_text(), (ROOT / "README.pt-BR.md").read_text()
+    if '<b>English</b> | <a href="README.pt-BR.md">Português (Brasil)</a>' not in en:
+        err("README.md: language selector missing or English not marked active")
+    if '<a href="README.md">English</a> | <b>Português (Brasil)</b>' not in pt:
+        err("README.pt-BR.md: language selector missing or Portuguese not marked active")
+    for what, rx in (("sections", r"^#{2,3} "), ("pictures", r"<picture>"), ("case links", r"cases/[a-z-]+\.(?:en|pt-BR)\.md")):
+        a, b = len(re.findall(rx, en, re.M)), len(re.findall(rx, pt, re.M))
+        if a != b:
+            err(f"README parity: {a} {what} in English vs {b} in Portuguese")
+    for ref in re.findall(r'srcset="([^"]+)"', pt):
+        loc = re.sub(r"-(dark|light)\.(svg|png)$", r"-pt-BR-\1.\2", ref)
+        if "-pt-BR-" not in ref and (ROOT / loc).exists():
+            err(f"README.pt-BR.md uses {ref} although a Portuguese variant exists")
+    if re.search(r"cases/[a-z-]+\.en\.md", pt) or re.search(r"cases/[a-z-]+\.pt-BR\.md", en):
+        err("README links a case in the other language")
+    for c in sorted((ROOT / "cases").glob("*.en.md")):
+        base = c.name[:-6]
+        ptc = c.with_name(f"{base}.pt-BR.md")
+        if not ptc.exists():
+            err(f"cases: {base} has no Portuguese version")
+            continue
+        e, p_ = c.read_text(), ptc.read_text()
+        if f'<b>English</b> | <a href="{base}.pt-BR.md">Português (Brasil)</a>' not in e:
+            err(f"{c.name}: language selector")
+        if f'<a href="{base}.en.md">English</a> | <b>Português (Brasil)</b>' not in p_:
+            err(f"{ptc.name}: language selector")
+        if "../README.md" not in e or "../README.pt-BR.md" not in p_ or "../README.pt-BR.md" in e or '"../README.md"' in p_:
+            err(f"cases/{base}: back link must return to the README in the same language")
+        if len(re.findall(r"^#{2,3} ", e, re.M)) != len(re.findall(r"^#{2,3} ", p_, re.M)):
+            err(f"cases/{base}: section count differs between languages")
+        if len(re.findall(r"<picture>", e)) != len(re.findall(r"<picture>", p_)):
+            err(f"cases/{base}: image count differs between languages")
+    v2 = ROOT / "assets" / "metrics" / "v2"
+    for en_svg in sorted(v2.glob("0*-dark.svg")) + sorted(v2.glob("0*-light.svg")):
+        if "-pt-BR-" in en_svg.name:
+            continue
+        pt_svg = en_svg.with_name(re.sub(r"-(dark|light)\.svg$", r"-pt-BR-\1.svg", en_svg.name))
+        if pt_svg.exists() and _numbers_in_desc(en_svg.read_text()) != _numbers_in_desc(pt_svg.read_text()):
+            err(f"dashboard parity: {en_svg.name} and {pt_svg.name} show different numbers")
+
+
 def check_links(links: list[str]) -> None:
     for url in sorted(set(links)):
         if url.startswith("mailto:"):
@@ -187,6 +236,7 @@ def main() -> int:
     check_assets()
     check_data()
     check_data_v2()
+    check_i18n()
     if "--links" in sys.argv:
         check_links(links)
     for e in errors:

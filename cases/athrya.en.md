@@ -1,6 +1,6 @@
 # Athrya — a multi-tenant platform for martial-arts academies
 
-<p align="right"><sub><a href="athrya.pt-BR.md">Português</a></sub></p>
+<p align="right"><b>English</b> | <a href="athrya.pt-BR.md">Português (Brasil)</a></p>
 
 ## Context
 
@@ -21,7 +21,7 @@ the remainder comes from three other contributors and an automation identity.
 
 - I defined the domain model, the architecture decisions (13 ADRs, a 22-entry decision log) and the acceptance criteria.
 - I set the engineering controls that every change had to pass: one mandatory PR gate, migration policy, security-boundary tests.
-- Every change reaches `main` only through a pull request that must pass the blocking validation pipeline, is linked to a work item and is squash-merged.
+- Branch policies on `main` require every pull request to pass the blocking validation pipeline, be linked to a work item and be squash-merged.
 - I owned every merge and signed off the technical, product and operations go-live approvals.
 
 ## Architecture
@@ -82,6 +82,13 @@ Decisions are recorded in **13 ADRs and a 22-entry decision log**. The main ones
 
 ## Results
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../assets/cases/athrya-demo-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="../assets/cases/athrya-demo-light.png">
+  <img alt="Athrya-JJ app screens from an isolated demo build with fictional academy, professors and students: student home, check-in, belt journey and the professor's day." src="../assets/cases/athrya-demo-dark.png" width="100%">
+</picture>
+
+
 - Went live in **October 2026** with five surfaces in production.
 - The mobile app is published on the **App Store and Google Play**.
 - **8 OTA updates** shipped during hypercare, all through the same gate. The automated API rollback was never needed.
@@ -114,7 +121,7 @@ I do not publish usage, revenue or growth figures. When this was written, the fo
 ## What is intentionally not shown
 
 - **Source code.** It is private and stays private.
-- **Customer identity.** No academy, location or person is named. Screenshots will only appear once they have been re-captured on neutral data.
+- **Customer identity.** No academy, location or person is named. The screens shown come from an isolated demo build with a fictional academy, professors and students.
 - **Infrastructure identifiers.** Hosts, resources, project IDs and app identifiers are all left out.
 - **Security internals.** Control design, audit findings and remaining hardening work are not described beyond the level of this page.
 - **Business figures.** No users, revenue, adoption or budget numbers are published.

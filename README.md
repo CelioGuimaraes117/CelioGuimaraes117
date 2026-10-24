@@ -4,7 +4,7 @@
   <img alt="Célio Crisólogo — Software Architect, Tech Lead, Applied AI Engineering. I architect systems. I build products. I engineer intelligence." src="assets/banners/hero-animated-dark.svg" width="100%">
 </picture>
 
-<p align="right"><sub><a href="README.pt-BR.md">Português</a></sub></p>
+<p align="right"><b>English</b> | <a href="README.pt-BR.md">Português (Brasil)</a></p>
 
 **Software Architect · Tech Lead · Applied AI Engineering.** I design platforms, take them to production and build AI systems with the guardrails they need. 7+ years in banking, telecom, public-sector tax and enterprise platforms; today I lead technical delivery on client engagements and build products at [Includlab](https://includlab.com.br), my software house.
 

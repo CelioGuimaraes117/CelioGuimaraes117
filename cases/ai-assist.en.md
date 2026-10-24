@@ -1,6 +1,6 @@
 # AI-Assist: a private AI gateway for Apple Watch and iPhone
 
-<p align="right"><sub><a href="ai-assist.pt-BR.md">Português</a></sub></p>
+<p align="right"><b>English</b> | <a href="ai-assist.pt-BR.md">Português (Brasil)</a></p>
 ## Context
 
 AI-Assist is a personal project: an assistant for Apple Watch, with an iPhone companion, that reaches large language models only through a gateway I control. It follows a multi-wave roadmap. This case covers the first four waves (foundation, Apple clients, the gateway with persistence and sync, and the provider layer), which closed with a frozen test battery, a written reconciliation and an independent review.

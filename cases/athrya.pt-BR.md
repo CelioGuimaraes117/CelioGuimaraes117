@@ -1,6 +1,6 @@
 # Athrya — uma plataforma multi-tenant para academias de artes marciais
 
-<p align="right"><sub><a href="athrya.en.md">English</a></sub></p>
+<p align="right"><a href="athrya.en.md">English</a> | <b>Português (Brasil)</b></p>
 
 ## Contexto
 
@@ -21,15 +21,15 @@ o restante vem de outros três colaboradores e de uma identidade de automação.
 
 - Defini o modelo de domínio, as decisões de arquitetura (13 ADRs e um registro de 22 decisões) e os critérios de aceite.
 - Estabeleci os controles de engenharia que toda mudança precisava passar: um gate de PR obrigatório, política de migrations e testes de fronteira de segurança.
-- Toda mudança chega à `main` apenas por pull request, que precisa passar no pipeline de validação bloqueante, ser vinculado a um work item e ser integrado por squash.
+- As políticas de branch da `main` exigem que todo pull request passe no pipeline de validação bloqueante, seja vinculado a um work item e seja integrado por squash.
 - Assumi cada merge e as aprovações técnica, de produto e de operações para o go-live.
 
 ## Arquitetura
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="../assets/cases/athrya-architecture-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="../assets/cases/athrya-architecture-light.svg">
-  <img alt="Arquitetura do Athrya: app mobile, portal, platform admin e landing de convite em produção, dashboard em desenvolvimento; pacotes compartilhados; API como única autoridade de autorização; PostgreSQL gerenciado; entrega do gate de PR ao promote ou rollback." src="../assets/cases/athrya-architecture-dark.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="../assets/cases/athrya-architecture-pt-BR-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="../assets/cases/athrya-architecture-pt-BR-light.svg">
+  <img alt="Arquitetura do Athrya: app mobile, portal, platform admin e landing de convite em produção, dashboard em desenvolvimento; pacotes compartilhados; API como única autoridade de autorização; PostgreSQL gerenciado; entrega do gate de PR ao promote ou rollback." src="../assets/cases/athrya-architecture-pt-BR-dark.svg" width="100%">
 </picture>
 
 
@@ -82,6 +82,13 @@ As decisões estão registradas em **13 ADRs e num log de 22 decisões**. As pri
 
 ## Resultados
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../assets/cases/athrya-demo-pt-BR-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="../assets/cases/athrya-demo-pt-BR-light.png">
+  <img alt="Telas do app Athrya-JJ num build de demonstração isolado, com academia, professores e alunos fictícios: início do aluno, check-in, jornada de faixa e o dia do professor." src="../assets/cases/athrya-demo-pt-BR-dark.png" width="100%">
+</picture>
+
+
 - Go-live em **outubro de 2026**, com cinco superfícies em produção.
 - O app mobile está publicado na **App Store e no Google Play**.
 - **8 atualizações OTA** foram publicadas durante o hypercare, todas pelo mesmo gate. O rollback automático da API nunca precisou ser acionado.
@@ -114,7 +121,7 @@ Não publico números de uso, receita ou crescimento. Quando este texto foi escr
 ## O que intencionalmente não é mostrado
 
 - **Código-fonte.** É privado e continua privado.
-- **Identidade de clientes.** Nenhuma academia, localidade ou pessoa é citada. As capturas de tela só serão mostradas depois de refeitas com dados neutros.
+- **Identidade de clientes.** Nenhuma academia, localidade ou pessoa é citada. As telas mostradas vêm de um build de demonstração isolado, com academia, professores e alunos fictícios.
 - **Identificadores de infraestrutura.** Hosts, recursos, IDs de projeto e identificadores de app ficaram de fora.
 - **Detalhes de segurança.** O desenho dos controles, os achados da auditoria e o endurecimento ainda pendente não são descritos além do nível desta página.
 - **Números de negócio.** Não há números de usuários, receita, adoção ou orçamento.

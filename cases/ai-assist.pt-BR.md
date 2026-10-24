@@ -1,6 +1,6 @@
 # AI-Assist: um gateway de IA privado para Apple Watch e iPhone
 
-<p align="right"><sub><a href="ai-assist.en.md">English</a></sub></p>
+<p align="right"><a href="ai-assist.en.md">English</a> | <b>Português (Brasil)</b></p>
 ## Contexto
 
 AI-Assist é um projeto pessoal: um assistente para Apple Watch, com um app companheiro para iPhone, que acessa modelos de linguagem apenas por meio de um gateway que eu controlo. Este case cobre as quatro primeiras ondas do roadmap (fundação, clientes Apple, gateway com persistência e sincronização, e camada de provedores), encerradas com uma bateria de testes congelada, uma reconciliação escrita e uma revisão independente.
@@ -19,15 +19,15 @@ Dono, arquiteto e engenheiro do projeto: escopo, arquitetura, os 14 ADRs, implem
 ## Arquitetura
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="../assets/cases/ai-assist-architecture-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="../assets/cases/ai-assist-architecture-light.svg">
-  <img alt="Arquitetura e estado real do AI-Assist: clientes de relógio e telefone, gateway de IA privado, roteador de modelos sem fallback silencioso, adaptador simulado ativo, adaptadores Anthropic e OpenAI prontos mas nunca chamados, laboratório de infraestrutura mantido em cópia separada." src="../assets/cases/ai-assist-architecture-dark.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="../assets/cases/ai-assist-architecture-pt-BR-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="../assets/cases/ai-assist-architecture-pt-BR-light.svg">
+  <img alt="Arquitetura e estado real do AI-Assist: clientes de relógio e telefone, gateway de IA privado, roteador de modelos sem fallback silencioso, adaptador simulado ativo, adaptadores Anthropic e OpenAI prontos mas nunca chamados, laboratório de infraestrutura mantido em cópia separada." src="../assets/cases/ai-assist-architecture-pt-BR-dark.svg" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="../assets/cases/ai-assist-flow-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="../assets/cases/ai-assist-flow-light.svg">
-  <img alt="Sequência de requisição e resposta do AI-Assist em sete passos, do dispositivo ao gateway, roteador e adaptador até um provedor simulado e de volta, com eventos de log sanitizados." src="../assets/cases/ai-assist-flow-dark.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="../assets/cases/ai-assist-flow-pt-BR-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="../assets/cases/ai-assist-flow-pt-BR-light.svg">
+  <img alt="Sequência de requisição e resposta do AI-Assist em sete passos, do dispositivo ao gateway, roteador e adaptador até um provedor simulado e de volta, com eventos de log sanitizados." src="../assets/cases/ai-assist-flow-pt-BR-dark.svg" width="100%">
 </picture>
 
 
@@ -63,7 +63,7 @@ Preocupações transversais:
 
 ## Práticas de engenharia
 
-- **14 ADRs**, de Apple nativo e gateway privado a política de credenciais e ativação de provedores.
+- **14 ADRs**, de Apple nativo e gateway privado a política de credenciais, identidade por dispositivo e ativação de provedores e orçamento.
 - **Bateria de testes.** Um script local roda todas as suítes, com testes de banco em clusters PostgreSQL efêmeros. Uma trava de rede bloqueia chamadas de saída durante os testes.
 - **Rodadas de revisão independente.** O trabalho foi revisado de forma independente em várias rodadas; a reverificação final, estática, terminou com ressalvas não bloqueantes, registradas no registro de riscos residuais.
 - **Ferramentas de segurança.** Varredura de segredos, análise estática com 22 regras próprias testadas, auditoria de dependências e checagem offline de cadeia de suprimentos.
@@ -71,9 +71,9 @@ Preocupações transversais:
 ## Resultados
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="../assets/cases/ai-assist-evidence-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="../assets/cases/ai-assist-evidence-light.png">
-  <img alt="Capturas do simulador: conversas no Apple Watch e no iPhone com respostas marcadas como simuladas e a tela de orçamento com o kill switch e a recusa de custos desconhecidos." src="../assets/cases/ai-assist-evidence-dark.png" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="../assets/cases/ai-assist-evidence-pt-BR-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="../assets/cases/ai-assist-evidence-pt-BR-light.png">
+  <img alt="Capturas do simulador: conversas no Apple Watch e no iPhone com respostas marcadas como simuladas e a tela de orçamento com o kill switch e a recusa de custos desconhecidos." src="../assets/cases/ai-assist-evidence-pt-BR-dark.png" width="100%">
 </picture>
 
 
@@ -88,7 +88,7 @@ Resultados de teste conforme registrados na bateria final:
 | UI de iPhone e Watch | passando na execução final (o Watch falhou uma vez por causa do próprio teste e passou na reexecução) |
 | Swift ↔ gateway | 5 de integração + 7 ponta a ponta passando |
 
-Uma jornada de UI conjunta rodou os dois simuladores contra um gateway local real e o provedor mock, do pareamento à edição de memória. O design está em 14 ADRs.
+Uma jornada de UI conjunta rodou os dois simuladores contra um gateway local real e o provedor mock, do pareamento à conversa, ao orçamento e à edição de memória. O design está em 14 ADRs.
 
 ## Status atual
 
