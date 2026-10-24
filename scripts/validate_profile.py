@@ -151,8 +151,14 @@ def check_data_v2() -> None:
         if s["consolidated"] != s["github_only"] + s["azure_devops_only"] + s["both"] \
                 or per["git"]["owner_authored_shas"] != s["consolidated"]:
             err(f"data/public-metrics-v2.json: {name} sources do not add up")
-        if per["contributions"]["verified_lower_bound"] > per["contributions"]["eligible_mirrored_commits"]:
-            err(f"data/public-metrics-v2.json: {name} lower bound above eligible")
+        con, g = per["contributions"], per["git"]
+        if set(con) != {"official_total", "eligible_mirrored_commits", "calendar_upper_bound", "pending_on_calendar"} \
+                or con["calendar_upper_bound"] > con["eligible_mirrored_commits"] \
+                or con["pending_on_calendar"] != con["eligible_mirrored_commits"] - con["calendar_upper_bound"]:
+            err(f"data/public-metrics-v2.json: {name} contribution figures inconsistent")
+        if g["default_branch_shas"] + g["other_live_branch_only_shas"] + g["deleted_branch_recovered_shas"] \
+                != g["owner_authored_shas"]:
+            err(f"data/public-metrics-v2.json: {name} reachability classes do not partition the population")
     check_privacy("data/public-metrics-v2.json", p.read_text())
 
 
