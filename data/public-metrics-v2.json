@@ -1,0 +1,261 @@
+{
+  "schema": "cea.public/v2",
+  "generated_on": "2026-10-24",
+  "collection": {
+    "status": "complete",
+    "scope": "all accessible refs; Azure DevOps (private, aggregated) + GitHub owned repositories",
+    "dedup": "by commit SHA across refs, repositories and platforms",
+    "identity": "owner-authored (author e-mail is one of the owner's addresses)"
+  },
+  "periods": {
+    "7d": {
+      "git": {
+        "owner_authored_shas": 253,
+        "owner_committed_shas": 252,
+        "default_branch_shas": 56,
+        "other_live_branch_only_shas": 120,
+        "deleted_branch_recovered_shas": 77,
+        "pr_shas": 105,
+        "merge_commit_shas": 69,
+        "unrecoverable_shas": 0
+      },
+      "sources": {
+        "github_only": 39,
+        "azure_devops_only": 21,
+        "both": 193,
+        "consolidated": 253
+      },
+      "delivery": {
+        "prs_created": 19,
+        "prs_completed": 17,
+        "prs_abandoned": 0,
+        "prs_open": 2,
+        "prs_reviewed": 0,
+        "squash_merges": 17,
+        "median_hours_to_merge": 2.4
+      },
+      "contributions": {
+        "official_total": 59,
+        "eligible_mirrored_commits": 17,
+        "calendar_upper_bound": 17,
+        "pending_on_calendar": 0
+      }
+    },
+    "30d": {
+      "git": {
+        "owner_authored_shas": 1896,
+        "owner_committed_shas": 1895,
+        "default_branch_shas": 183,
+        "other_live_branch_only_shas": 541,
+        "deleted_branch_recovered_shas": 1172,
+        "pr_shas": 1122,
+        "merge_commit_shas": 560,
+        "unrecoverable_shas": 0
+      },
+      "sources": {
+        "github_only": 39,
+        "azure_devops_only": 21,
+        "both": 1836,
+        "consolidated": 1896
+      },
+      "delivery": {
+        "prs_created": 153,
+        "prs_completed": 147,
+        "prs_abandoned": 4,
+        "prs_open": 2,
+        "prs_reviewed": 0,
+        "squash_merges": 147,
+        "median_hours_to_merge": 1.6
+      },
+      "contributions": {
+        "official_total": 186,
+        "eligible_mirrored_commits": 144,
+        "calendar_upper_bound": 144,
+        "pending_on_calendar": 0
+      }
+    },
+    "12m": {
+      "git": {
+        "owner_authored_shas": 4275,
+        "owner_committed_shas": 4084,
+        "default_branch_shas": 985,
+        "other_live_branch_only_shas": 841,
+        "deleted_branch_recovered_shas": 2449,
+        "pr_shas": 2165,
+        "merge_commit_shas": 1078,
+        "unrecoverable_shas": 0
+      },
+      "sources": {
+        "github_only": 867,
+        "azure_devops_only": 22,
+        "both": 3386,
+        "consolidated": 4275
+      },
+      "delivery": {
+        "prs_created": 535,
+        "prs_completed": 503,
+        "prs_abandoned": 30,
+        "prs_open": 2,
+        "prs_reviewed": 5,
+        "squash_merges": 384,
+        "median_hours_to_merge": 0.5
+      },
+      "contributions": {
+        "official_total": 1073,
+        "eligible_mirrored_commits": 235,
+        "calendar_upper_bound": 211,
+        "pending_on_calendar": 24
+      }
+    },
+    "all": {
+      "git": {
+        "owner_authored_shas": 4318,
+        "owner_committed_shas": 4084,
+        "default_branch_shas": 1027,
+        "other_live_branch_only_shas": 842,
+        "deleted_branch_recovered_shas": 2449,
+        "pr_shas": 2165,
+        "merge_commit_shas": 1078,
+        "unrecoverable_shas": 0
+      },
+      "sources": {
+        "github_only": 910,
+        "azure_devops_only": 22,
+        "both": 3386,
+        "consolidated": 4318
+      },
+      "delivery": {
+        "prs_created": 536,
+        "prs_completed": 504,
+        "prs_abandoned": 30,
+        "prs_open": 2,
+        "prs_reviewed": 5,
+        "squash_merges": 384,
+        "median_hours_to_merge": 0.5
+      },
+      "contributions": {
+        "official_total": 1130,
+        "eligible_mirrored_commits": 235,
+        "calendar_upper_bound": 211,
+        "pending_on_calendar": 24
+      }
+    }
+  },
+  "monthly": [
+    {
+      "month": "2025-11",
+      "default_branch": 1,
+      "other_refs": 0
+    },
+    {
+      "month": "2025-12",
+      "default_branch": 14,
+      "other_refs": 0
+    },
+    {
+      "month": "2026-01",
+      "default_branch": 5,
+      "other_refs": 0
+    },
+    {
+      "month": "2026-02",
+      "default_branch": 1,
+      "other_refs": 13
+    },
+    {
+      "month": "2026-03",
+      "default_branch": 3,
+      "other_refs": 69
+    },
+    {
+      "month": "2026-04",
+      "default_branch": 0,
+      "other_refs": 0
+    },
+    {
+      "month": "2026-05",
+      "default_branch": 44,
+      "other_refs": 0
+    },
+    {
+      "month": "2026-06",
+      "default_branch": 414,
+      "other_refs": 10
+    },
+    {
+      "month": "2026-07",
+      "default_branch": 183,
+      "other_refs": 1
+    },
+    {
+      "month": "2026-08",
+      "default_branch": 59,
+      "other_refs": 24
+    },
+    {
+      "month": "2026-09",
+      "default_branch": 126,
+      "other_refs": 1979
+    },
+    {
+      "month": "2026-10",
+      "default_branch": 129,
+      "other_refs": 1194
+    }
+  ],
+  "languages": [
+    {
+      "name": "TypeScript",
+      "share": 0.8399
+    },
+    {
+      "name": "JavaScript",
+      "share": 0.0836
+    },
+    {
+      "name": "Python",
+      "share": 0.0308
+    },
+    {
+      "name": "PLpgSQL",
+      "share": 0.0139
+    },
+    {
+      "name": "Go",
+      "share": 0.0105
+    },
+    {
+      "name": "HTML",
+      "share": 0.006
+    },
+    {
+      "name": "Other",
+      "share": 0.0153
+    }
+  ],
+  "definitions": {
+    "git.owner_authored_shas": "Unique commit SHAs authored by the owner, in every accessible ref of every source (default and other branches, PR iterations, deleted branches recovered by id), counted once.",
+    "git.owner_committed_shas": "Unique SHAs whose committer is the owner (includes squash commits created by Azure DevOps on completion).",
+    "git.default_branch_shas": "Owner-authored SHAs reachable from a default branch.",
+    "git.other_live_branch_only_shas": "Owner-authored SHAs only on live non-default branches.",
+    "git.deleted_branch_recovered_shas": "Owner-authored SHAs no longer on any branch, recovered by id from Azure DevOps.",
+    "git.pr_shas": "Owner-authored SHAs that belong to an Azure DevOps pull request.",
+    "git.merge_commit_shas": "Owner-authored SHAs with two or more parents.",
+    "git.unrecoverable_shas": "SHAs referenced by Azure DevOps whose objects could not be retrieved.",
+    "sources.github_only": "Owner-authored SHAs found only on GitHub (owned repositories).",
+    "sources.azure_devops_only": "Owner-authored SHAs found only in Azure DevOps (not present in the private GitHub mirror).",
+    "sources.both": "Owner-authored SHAs present on both platforms (same SHA).",
+    "sources.consolidated": "github_only + azure_devops_only + both.",
+    "delivery.prs_created": "Pull requests opened by the owner (Azure DevOps + GitHub).",
+    "delivery.prs_completed": "Of those, completed / merged.",
+    "delivery.prs_abandoned": "Of those, abandoned / closed without merge.",
+    "delivery.prs_open": "Of those, still open.",
+    "delivery.prs_reviewed": "Pull requests by others that the owner reviewed (vote or review).",
+    "delivery.squash_merges": "Completed Azure DevOps PRs merged with the squash strategy.",
+    "delivery.median_hours_to_merge": "Median hours from PR creation to completion (owner PRs).",
+    "contributions.official_total": "Contributions shown by the official GitHub calendar for the period (all types).",
+    "contributions.eligible_mirrored_commits": "Default-branch commits in the private mirrors authored with an e-mail verified on the GitHub account.",
+    "contributions.calendar_upper_bound": "Sum over days of min(calendar count, eligible mirrored commits that day): the most eligible commits the calendar can be showing (an upper bound, not proof of recognition).",
+    "contributions.pending_on_calendar": "eligible_mirrored_commits minus calendar_upper_bound: eligible commits the calendar provably does not show yet."
+  }
+}
