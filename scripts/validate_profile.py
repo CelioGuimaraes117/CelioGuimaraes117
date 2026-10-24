@@ -169,6 +169,12 @@ def _numbers_in_desc(svg: str) -> list[str]:
     return [n.replace(",", "").replace(".", "") for n in nums if not re.fullmatch(r"\d{4}-\d{2}", n)]
 
 
+def _numbers(md: str) -> list[str]:
+    """Numbers stated in prose (links, image paths, HTML attributes and code spans removed), digits only."""
+    text = re.sub(r"<[^>]+>|\]\([^)]*\)|`[^`]*`|srcset=\"[^\"]*\"", " ", md)
+    return [n.replace(",", "").replace(".", "") for n in re.findall(r"\d[\d.,]*\d|\d", text)]
+
+
 def check_i18n() -> None:
     """English is the default (README.md); Portuguese (README.pt-BR.md) must mirror it in structure and data."""
     en, pt = (ROOT / "README.md").read_text(), (ROOT / "README.pt-BR.md").read_text()
@@ -180,6 +186,8 @@ def check_i18n() -> None:
         a, b = len(re.findall(rx, en, re.M)), len(re.findall(rx, pt, re.M))
         if a != b:
             err(f"README parity: {a} {what} in English vs {b} in Portuguese")
+    if _numbers(en) != _numbers(pt):
+        err("README parity: the numbers differ between languages")
     for ref in re.findall(r'srcset="([^"]+)"', pt):
         loc = re.sub(r"-(dark|light)\.(svg|png)$", r"-pt-BR-\1.\2", ref)
         if "-pt-BR-" not in ref and (ROOT / loc).exists():
@@ -203,12 +211,16 @@ def check_i18n() -> None:
             err(f"cases/{base}: section count differs between languages")
         if len(re.findall(r"<picture>", e)) != len(re.findall(r"<picture>", p_)):
             err(f"cases/{base}: image count differs between languages")
+        if _numbers(e) != _numbers(p_):
+            err(f"cases/{base}: the numbers differ between languages")
     v2 = ROOT / "assets" / "metrics" / "v2"
     for en_svg in sorted(v2.glob("0*-dark.svg")) + sorted(v2.glob("0*-light.svg")):
         if "-pt-BR-" in en_svg.name:
             continue
         pt_svg = en_svg.with_name(re.sub(r"-(dark|light)\.svg$", r"-pt-BR-\1.svg", en_svg.name))
-        if pt_svg.exists() and _numbers_in_desc(en_svg.read_text()) != _numbers_in_desc(pt_svg.read_text()):
+        if not pt_svg.exists():
+            err(f"dashboard parity: {en_svg.name} has no Portuguese counterpart")
+        elif _numbers_in_desc(en_svg.read_text()) != _numbers_in_desc(pt_svg.read_text()):
             err(f"dashboard parity: {en_svg.name} and {pt_svg.name} show different numbers")
 
 
