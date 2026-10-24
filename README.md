@@ -31,7 +31,7 @@ Apple Watch and iPhone clients talk to a private AI gateway that owns device ide
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/cases/ai-assist-architecture-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/cases/ai-assist-architecture-light.svg">
-  <img alt="AI-Assist architecture and real status: watch and phone clients, private AI gateway, model router without silent fallback, mock adapter active, Anthropic and OpenAI adapters ready but never called, infrastructure lab not merged." src="assets/cases/ai-assist-architecture-dark.svg" width="100%">
+  <img alt="AI-Assist architecture and real status: watch and phone clients, private AI gateway, model router without silent fallback, mock adapter active, Anthropic and OpenAI adapters ready but never called, infrastructure lab kept in a separate copy." src="assets/cases/ai-assist-architecture-dark.svg" width="100%">
 </picture>
 
 ### 03 · Engineering platform — DevOps intelligence &nbsp;<sub><code>OPERATIONAL</code></sub>

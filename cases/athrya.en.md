@@ -63,7 +63,7 @@ Decisions are recorded in **13 ADRs and a 22-entry decision log**. The main ones
 - **"Merged is not homologated."** Partner integrations are merged in an inert state and are enabled only after partner certification.
 - **A small environment topology** sized to a fixed monthly budget.
 - **One PR gate instead of four.** Partly driven by limited CI concurrency.
-- **No mandatory second human reviewer.** This is a conscious choice while there is one engineer. The gate and the independent AI review compensate.
+- **No mandatory second human reviewer.** A conscious choice while the team is one engineer; the mandatory PR gate remains the enforced quality bar for every change.
 
 ## Engineering practices
 

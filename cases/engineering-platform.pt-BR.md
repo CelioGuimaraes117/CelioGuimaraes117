@@ -64,17 +64,15 @@ Azure DevOps
 ## Resultados
 
 - **3.414** commits inventariados, **0** irrecuperáveis.
-- **Mais de 4.300** commits únicos de autoria do dono consolidados entre plataformas (todo o histórico até outubro de 2026, deduplicados por SHA; o número vivo está no dashboard).
-- **235** commits elegíveis na branch padrão para contribuições oficiais do GitHub.
-- **149** testes automatizados.
+- **Mais de 4.300** commits únicos atribuídos às minhas identidades Git, consolidados entre plataformas (todo o histórico até outubro de 2026, deduplicados por SHA; o número vivo está no dashboard).
+- Os commits elegíveis na branch padrão para contribuições oficiais do GitHub, e quantos o calendário ainda não mostra, estão no dashboard.
+- **Mais de 150** testes automatizados.
 
 ## Status atual e estado residual
 
 - Os repositórios aprovados estão espelhados, e seus conjuntos de commits são verificados contra o Azure DevOps por SHA, com as exclusões de política aplicadas.
-- Uma lacuna inicial de configuração permitiu que a configuração de CI espelhada rodasse uma vez; isso foi contido, auditado e transformado em controles permanentes.
-- Automações do tipo Dependabot nos espelhos estão contidas e monitoradas; a prevenção definitiva depende de uma decisão do dono.
+- Regras de repositório nos espelhos permitem apenas as atualizações fast-forward do próprio espelho; automações de terceiros não conseguem criar branches nem pull requests ali, e qualquer tentativa é monitorada.
 - O calendário oficial é comparado dia a dia com os commits elegíveis: o dashboard mostra o máximo que ele pode estar exibindo e quantos ele comprovadamente ainda não exibe. A diferença é reportada, não arredondada.
-- A reconciliação de métricas mais recente foi uma execução local; a execução agendada na nuvem aguarda um ajuste de permissão de credencial.
 
 ## Lições aprendidas
 

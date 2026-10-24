@@ -64,17 +64,15 @@ Azure DevOps
 ## Results
 
 - **3,414** commits inventoried, **0** unrecoverable.
-- **More than 4,300** unique owner-authored commits consolidated across platforms (all history to October 2026, de-duplicated by SHA; the live figure is on the dashboard).
-- **235** eligible default-branch commits for official GitHub contributions.
-- **149** automated tests.
+- **More than 4,300** unique commits attributed to my Git identities, consolidated across platforms (all history to October 2026, de-duplicated by SHA; the live figure is on the dashboard).
+- Eligible default-branch commits for official GitHub contributions, and how many the calendar does not show yet, are reported on the dashboard.
+- **150+** automated tests.
 
 ## Current status and residual state
 
 - Approved repositories are mirrored, and their commit sets are verified against Azure DevOps by SHA, with policy exclusions enforced.
-- An early configuration gap let mirrored CI configuration run once; it was contained, audited and turned into permanent controls.
-- Dependabot-style automation on mirrors is contained and monitored; the definitive prevention is pending an owner decision.
+- Repository rules on the mirrors allow only the mirror's own fast-forward updates; third-party automation cannot create branches or pull requests there, and any attempt is monitored.
 - The official calendar is compared day by day with the eligible commits: the dashboard shows the most it can be displaying and how many it provably does not show yet. The gap is reported, not rounded.
-- The latest metrics reconciliation was a local run; the scheduled hosted run is waiting on a credential permission fix.
 
 ## Lessons learned
 

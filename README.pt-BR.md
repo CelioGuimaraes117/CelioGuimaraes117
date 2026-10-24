@@ -31,7 +31,7 @@ Clientes Apple Watch e iPhone conversam com um gateway de IA privado que concent
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/cases/ai-assist-architecture-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/cases/ai-assist-architecture-light.svg">
-  <img alt="Arquitetura e estado real do AI-Assist: clientes de relógio e telefone, gateway de IA privado, roteador de modelos sem fallback silencioso, adaptador simulado ativo, adaptadores Anthropic e OpenAI prontos mas nunca chamados, laboratório de infraestrutura não integrado." src="assets/cases/ai-assist-architecture-dark.svg" width="100%">
+  <img alt="Arquitetura e estado real do AI-Assist: clientes de relógio e telefone, gateway de IA privado, roteador de modelos sem fallback silencioso, adaptador simulado ativo, adaptadores Anthropic e OpenAI prontos mas nunca chamados, laboratório de infraestrutura mantido em cópia separada." src="assets/cases/ai-assist-architecture-dark.svg" width="100%">
 </picture>
 
 ### 03 · Plataforma de engenharia — DevOps intelligence &nbsp;<sub><code>OPERACIONAL</code></sub>

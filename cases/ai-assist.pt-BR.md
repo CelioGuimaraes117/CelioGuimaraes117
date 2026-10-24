@@ -21,7 +21,7 @@ Dono, arquiteto e engenheiro do projeto: escopo, arquitetura, os 14 ADRs, implem
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../assets/cases/ai-assist-architecture-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="../assets/cases/ai-assist-architecture-light.svg">
-  <img alt="AI-Assist architecture and real status: watch and phone clients, private AI gateway, model router without silent fallback, mock adapter active, Anthropic and OpenAI adapters ready but never called, infrastructure lab not merged." src="../assets/cases/ai-assist-architecture-dark.svg" width="100%">
+  <img alt="AI-Assist architecture and real status: watch and phone clients, private AI gateway, model router without silent fallback, mock adapter active, Anthropic and OpenAI adapters ready but never called, infrastructure lab kept in a separate copy." src="../assets/cases/ai-assist-architecture-dark.svg" width="100%">
 </picture>
 
 <picture>
@@ -99,7 +99,7 @@ Uma jornada de UI conjunta rodou os dois simuladores contra um gateway local rea
 | Persistência com row-level security, sincronização, memória | Implementado; validado localmente |
 | Roteador de modelos, adaptadores mock e simulados | Implementado; validado offline |
 | Adaptadores Anthropic e OpenAI | Implementado; bloqueado, nunca chamado |
-| Autenticação de provedor sem chave, circuit breaker, rate limiting por provedor, custo exato | Só no laboratório (branch não integrada) |
+| Autenticação de provedor sem chave, circuit breaker, rate limiting por provedor, custo exato | Só no laboratório (cópia separada, ainda não reconciliada com a linha principal) |
 | Notificações, dados de saúde, widgets e complicações, motor de políticas, ferramentas de desenvolvedor | Planejado |
 | Pipeline de CI, hospedagem em nuvem | Planejado (apenas desenho e templates, nunca aplicados) |
 
@@ -111,15 +111,15 @@ Uma jornada de UI conjunta rodou os dois simuladores contra um gateway local rea
 - Sem avaliações de LLM; apenas testes determinísticos e offline de prompt injection.
 - Sem CI; a bateria roda localmente.
 - Aceite em dispositivos físicos pendente.
-- O infra-lab (autenticação de provedor sem chave, circuit breaker, rate limiting por provedor, custo exato) é uma branch de laboratório não integrada, sem execução de testes registrada após as mudanças.
-- Riscos residuais: uma janela curta de revogação, mitigação parcial de prompt injection, imagem base fixada por tag e revogação de sincronização que mantém cópias já sincronizadas.
+- O infra-lab (autenticação de provedor sem chave, circuit breaker, rate limiting por provedor, custo exato) é uma cópia de laboratório separada, ainda não reconciliada com a linha principal,, sem execução de testes registrada após as mudanças.
+- Os riscos residuais ficam num registro próprio e precisam ser revisados de novo antes de qualquer implantação remota.
 
 ## Lições aprendidas
 
 - Recusa como padrão é testável: a ativação real é bloqueada por design, e a verificação de ativação deve falhar.
 - Validação offline não é validação ao vivo, por isso a onda de provedores está registrada como "validada offline, API real pendente".
 - Registrar a execução, não só o resultado: a reexecução do Watch está documentada.
-- Uma branch de laboratório protegeu a linha principal, ao custo de uma reconciliação pendente.
+- Uma cópia de laboratório separada protegeu a linha principal, ao custo de uma reconciliação pendente.
 
 ## O que não é mostrado de propósito
 

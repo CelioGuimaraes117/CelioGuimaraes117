@@ -63,7 +63,7 @@ As decisões estão registradas em **13 ADRs e num log de 22 decisões**. As pri
 - **"Mergeado não é homologado."** As integrações com parceiros entram inertes e só são ativadas depois da certificação do parceiro.
 - **Uma topologia de ambientes enxuta**, dimensionada para um teto de orçamento mensal fixo.
 - **Um gate de PR em vez de quatro.** Motivado em parte pela concorrência limitada do CI.
-- **Sem segundo revisor humano obrigatório.** É uma escolha consciente enquanto há um único engenheiro. O gate e a revisão independente por IA compensam.
+- **Sem segundo revisor humano obrigatório.** Uma escolha consciente enquanto o time é um único engenheiro; o gate de PR obrigatório continua sendo a régua de qualidade aplicada a toda mudança.
 
 ## Práticas de engenharia
 

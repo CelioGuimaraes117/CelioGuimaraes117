@@ -21,7 +21,7 @@ Owner, architect and engineer of the project: product scope, architecture, the 1
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../assets/cases/ai-assist-architecture-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="../assets/cases/ai-assist-architecture-light.svg">
-  <img alt="AI-Assist architecture and real status: watch and phone clients, private AI gateway, model router without silent fallback, mock adapter active, Anthropic and OpenAI adapters ready but never called, infrastructure lab not merged." src="../assets/cases/ai-assist-architecture-dark.svg" width="100%">
+  <img alt="AI-Assist architecture and real status: watch and phone clients, private AI gateway, model router without silent fallback, mock adapter active, Anthropic and OpenAI adapters ready but never called, infrastructure lab kept in a separate copy." src="../assets/cases/ai-assist-architecture-dark.svg" width="100%">
 </picture>
 
 <picture>
@@ -99,7 +99,7 @@ A joint UI journey also ran both simulators against a real local gateway and the
 | Persistence with row-level security, sync, memory | Implemented; validated locally |
 | Model router, mock and simulated adapters | Implemented; validated offline |
 | Anthropic and OpenAI adapters | Implemented; blocked, never called |
-| Keyless provider auth, circuit breaker, provider rate limiting, exact cost | Lab-only (unmerged branch) |
+| Keyless provider auth, circuit breaker, provider rate limiting, exact cost | Lab-only (separate copy, not yet reconciled with the main line) |
 | Notifications, health data, widgets and complications, policy engine, developer tools | Planned |
 | CI pipeline, cloud hosting | Planned (design and templates only, never applied) |
 
@@ -111,15 +111,15 @@ A joint UI journey also ran both simulators against a real local gateway and the
 - No LLM evaluations; only deterministic, offline prompt-injection tests.
 - No CI; the battery runs locally.
 - Physical-device acceptance pending.
-- The infra-lab work (keyless provider auth, circuit breaker, provider rate limiting, exact cost) is an unmerged lab branch with no recorded test run after those changes.
-- Residual risks: a short revocation window, partial prompt-injection mitigation, a base image pinned by tag, and revoked sync keeping already-synced copies.
+- The infra-lab work (keyless provider auth, circuit breaker, provider rate limiting, exact cost) is a separate lab copy, not yet reconciled with the main line, with no recorded test run after those changes.
+- Residual risks are tracked in a register and must be re-reviewed before any remote deployment.
 
 ## Lessons learned
 
 - Refusal as the default is testable: real activation is blocked by design, and the activation check is expected to fail.
 - Offline validation is not live validation, so the provider wave is recorded as "offline validated, live API pending".
 - Report the run, not only the result: the Watch UI rerun is recorded.
-- A lab branch protected the main line, at the price of a pending reconciliation.
+- A separate lab copy protected the main line, at the price of a pending reconciliation.
 
 ## What is intentionally not shown
 
