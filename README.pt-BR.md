@@ -1,138 +1,105 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banners/hero-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/banners/hero-light.svg">
-  <img alt="Célio Crisólogo — Software Architecture / Backend / Applied AI" src="assets/banners/hero-dark.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banners/hero-animated-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/banners/hero-animated-light.svg">
+  <img alt="Célio Crisólogo — Software Architect, Tech Lead, Applied AI Engineering. I architect systems. I build products. I engineer intelligence." src="assets/banners/hero-animated-dark.svg" width="100%">
 </picture>
 
 <p align="right"><sub><a href="README.md">English</a></sub></p>
 
-**Arquiteto de Software** com foco em engenharia de backend, sistemas distribuídos, infraestrutura em nuvem e IA aplicada.
+**Arquiteto de Software · Tech Lead · Engenharia de IA Aplicada.** Projeto plataformas, levo-as à produção e construo sistemas de IA com as salvaguardas que eles exigem. Mais de 7 anos em bancos, telecom, área fiscal pública e plataformas corporativas; hoje lidero a entrega técnica em projetos de clientes e construo produtos na [Includlab](https://includlab.com.br), minha software house.
 
-Há mais de 7 anos projeto, modernizo e opero sistemas críticos em bancos, telecom, área fiscal pública e plataformas corporativas — hands-on em Java, Go e Node.js/TypeScript, e como líder técnico definindo padrões de engenharia, quality gates e práticas de entrega para times multidisciplinares. Hoje lidero a entrega técnica em projetos de clientes e construo produtos na [Includlab](https://includlab.com.br), minha software house.
+<sub>O código-fonte dos sistemas abaixo é privado. Aqui aparecem visões de arquitetura sanitizadas, estado verificável e métricas agregadas — nunca a implementação.</sub>
 
-<br>
+## Engenharia em destaque
+
+### 01 · Athrya — arquitetura de plataforma &nbsp;<sub><code>PRODUÇÃO</code></sub>
+
+SaaS multi-tenant para academias de jiu-jitsu: grade de aulas, check-in, frequência, progressão de faixas, responsáveis e menores supervisionados. Um app mobile (App Store e Google Play), portais web e uma API, em produção desde outubro de 2026.
+**Decisão:** domínio, casos de uso e contratos vivem em pacotes TypeScript compartilhados dos quais toda superfície depende, então as regras de negócio são escritas uma vez; a API é a única autoridade de autorização e o escopo do tenant é aplicado na camada de dados. **Entrega:** um gate de PR obrigatório, migrations aditivas por pipeline dedicado, deploys em etapas com rollback. Sou responsável pela arquitetura, pelos controles de engenharia, por cada merge e pelas aprovações de go-live. → [Ler o case](cases/athrya.pt-BR.md)
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/sections/01-engineering-focus-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/sections/01-engineering-focus-light.svg">
-  <img alt="01 — Engineering focus" src="assets/sections/01-engineering-focus-dark.svg" width="520">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/cases/athrya-architecture-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/cases/athrya-architecture-light.svg">
+  <img alt="Arquitetura do Athrya: app mobile, portal, platform admin e landing de convite em produção, dashboard em desenvolvimento; pacotes compartilhados; API como única autoridade de autorização; PostgreSQL gerenciado; entrega do gate de PR ao promote ou rollback." src="assets/cases/athrya-architecture-dark.svg" width="100%">
 </picture>
 
-- **Arquitetura de Software** — Fronteiras orientadas a domínio, integração orientada a eventos e modernização de legados (Strangler Fig), documentadas como decisões revisáveis.
-- **Backend e Sistemas Distribuídos** — Serviços transacionais para domínios regulados e de alto volume: pagamentos, crédito, fiscal, telecom.
-- **Cloud e Platform Engineering** — AWS e Azure, Kubernetes, infraestrutura como código, promoção entre ambientes.
-- **DevOps e CI/CD** — Pipelines com quality gates, preflight e promoção rastreável da branch até produção.
-- **IA Aplicada e Automação** — Integração com LLMs e fluxos de engenharia assistidos por agentes, com decisões sob responsabilidade humana.
-- **Liderança Técnica** — Padrões, revisões, governança de sprint, mentoria e contratação.
+### 02 · AI-Assist — engenharia de IA aplicada &nbsp;<sub><code>PROTÓTIPO</code></sub>
 
-<br>
+Clientes Apple Watch e iPhone conversam com um gateway de IA privado que concentra identidade do dispositivo, orçamento e kill switch, limites de taxa e as chaves dos provedores; um roteador de modelos **sem fallback silencioso** escolhe o adaptador.
+**Estado real:** validado em simuladores com 187/187 testes do gateway e 136/136 de banco; toda resposta até hoje veio de um provedor simulado; os adaptadores Anthropic e OpenAI estão prontos, mas nunca foram chamados; não está implantado nem na App Store. → [Ler o case](cases/ai-assist.pt-BR.md)
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/sections/02-technology-stack-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/sections/02-technology-stack-light.svg">
-  <img alt="02 — Technology stack" src="assets/sections/02-technology-stack-dark.svg" width="520">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/cases/ai-assist-architecture-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/cases/ai-assist-architecture-light.svg">
+  <img alt="Arquitetura e estado real do AI-Assist: clientes de relógio e telefone, gateway de IA privado, roteador de modelos sem fallback silencioso, adaptador simulado ativo, adaptadores Anthropic e OpenAI prontos mas nunca chamados, laboratório de infraestrutura não integrado." src="assets/cases/ai-assist-architecture-dark.svg" width="100%">
 </picture>
 
-| | |
-|---|---|
-| **Linguagens** | `Java` `Go` `TypeScript` `Node.js` `Python` `C#` |
-| **Backend** | `Spring Boot` `Spring Cloud` `Quarkus` `NestJS` `Express` `Prisma` `Hibernate/JPA` |
-| **Cloud & Infra** | `AWS` `Azure` `Kubernetes` `Docker` `Helm` `Terraform` |
-| **Dados e Mensageria** | `PostgreSQL` `Oracle` `MongoDB` `Redis` `Kafka` `RabbitMQ` |
-| **DevOps e Qualidade** | `Azure DevOps` `GitHub Actions` `GitLab CI` `SonarQube` `OAuth2/OIDC` |
-| **IA e Agentes** | `LLM integration` `LangChain` `Claude Code` `Codex` `Agent workflows` |
+### 03 · Plataforma de engenharia — DevOps intelligence &nbsp;<sub><code>OPERACIONAL</code></sub>
 
-<br>
+A maior parte do meu trabalho vive em repositórios privados no Azure DevOps. Esta plataforma o torna visível **sem falsificar nada**: inventário de todo o histórico, um gate de varredura de segredos que falha fechado, um espelho privado unidirecional só por fast-forward que preserva cada SHA, autor e data, e um coletor que deduplica por SHA e publica apenas agregados com schema estrito. É a origem dos números abaixo. → [Ler o case](cases/engineering-platform.pt-BR.md)
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/sections/03-engineering-activity-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/sections/03-engineering-activity-light.svg">
-  <img alt="03 — Engineering activity" src="assets/sections/03-engineering-activity-dark.svg" width="520">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/cases/engineering-platform-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/cases/engineering-platform-light.svg">
+  <img alt="Pipeline da plataforma de engenharia: Azure DevOps, inventário, gate de segurança, espelho privado, coletor, JSON público e perfil; com privilégio mínimo, health e alertas, agendamento consciente de custo e revisão independente." src="assets/cases/engineering-platform-dark.svg" width="100%">
 </picture>
 
+## Evidências de engenharia
+
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/metrics/engineering-activity-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/metrics/engineering-activity-light.svg">
-  <img alt="Engineering activity over the last 12 months: commits, pull requests and code reviews across GitHub and Azure DevOps" src="assets/metrics/engineering-activity-dark.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/metrics/v2/031-activity-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/metrics/v2/031-activity-light.svg">
+  <img alt="Atividade de engenharia em todas as branches: commits únicos atribuídos às minhas identidades Git em 7 dias, 30 dias, 12 meses e todo o histórico, divididos entre branch default, outras branches ativas e branches apagadas recuperadas por id." src="assets/metrics/v2/031-activity-dark.svg" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/metrics/monthly-commits-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/metrics/monthly-commits-light.svg">
-  <img alt="Monthly commits for the last 12 months, split by platform" src="assets/metrics/monthly-commits-dark.svg" width="100%">
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/metrics/code-by-language-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/metrics/code-by-language-light.svg">
-  <img alt="Share of code by language across owned repositories" src="assets/metrics/code-by-language-dark.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/metrics/v2/034-delivery-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/metrics/v2/034-delivery-light.svg">
+  <img alt="Entrega em 12 meses: pull requests abertos, concluídos após o gate obrigatório, abertos e abandonados, revisões e squash merges." src="assets/metrics/v2/034-delivery-dark.svg" width="100%">
 </picture>
 
 <details>
-<summary><sub>Como estes números são produzidos</sub></summary>
+<summary><b>Onde o trabalho vive · fontes · contribuições no GitHub · como os números são produzidos</b></summary>
 
 <br>
 
-- **Fontes:** APIs oficiais do GitHub (REST/GraphQL) e do Azure DevOps (REST), coletadas num pipeline privado. Os dados brutos não saem de lá; esta página recebe apenas contagens agregadas ([`data/public-metrics.json`](data/public-metrics.json)).
-- **Commits:** commits de minha autoria no branch padrão de cada repositório, últimos 12 meses. Um commit presente nas duas plataformas (mesmo SHA, ex.: espelho privado) é **contado uma vez**.
-- **Pull requests / reviews:** PRs que abri; reviews são PRs de outras pessoas em que votei ou enviei revisão.
-- **Azure DevOps:** repositórios privados, exibidos só de forma agregada, sem nomes.
-- **Linguagens:** bytes por linguagem segundo o GitHub Linguist nos meus repositórios. Mede volume de código, não proficiência.
-- Contagem de commits descreve atividade, não produtividade nem qualidade.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/metrics/v2/032-monthly-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/metrics/v2/032-monthly-light.svg">
+  <img alt="Commits únicos por mês em 12 meses, divididos entre branch default e outras refs." src="assets/metrics/v2/032-monthly-dark.svg" width="100%">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/metrics/v2/033-sources-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/metrics/v2/033-sources-light.svg">
+  <img alt="Fontes em 12 meses: commits só no Azure DevOps, nas duas plataformas com o mesmo SHA (contados uma vez) e só no GitHub." src="assets/metrics/v2/033-sources-dark.svg" width="100%">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/metrics/v2/035-contributions-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/metrics/v2/035-contributions-light.svg">
+  <img alt="Contribuições no GitHub em 12 meses: total do calendário oficial, commits espelhados elegíveis e quantos deles o calendário comprovadamente ainda não mostra." src="assets/metrics/v2/035-contributions-dark.svg" width="100%">
+</picture>
+
+- As contagens de commits se baseiam em identidades Git de autor verificadas, deduplicadas por SHA entre GitHub e Azure DevOps. Elas medem atividade nos repositórios, não linhas escritas manualmente nem produtividade individual.
+- **Quatro significados, nunca somados:** atividade de engenharia (qualquer branch), onde o trabalho vive, entrega (pull requests e revisões) e contribuições no GitHub (o que o próprio GitHub reconhece, pelas regras dele).
+- **Fontes:** API REST e histórico Git do Azure DevOps e API do GitHub, coletados num pipeline privado; esta página recebe apenas agregados ([`data/public-metrics-v2.json`](data/public-metrics-v2.json)). Nenhum histórico foi reescrito e nenhum commit foi criado para preencher o calendário.
 
 </details>
 
-<br>
+## Tecnologia e liderança
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/sections/04-selected-work-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/sections/04-selected-work-light.svg">
-  <img alt="04 — Selected work" src="assets/sections/04-selected-work-dark.svg" width="520">
-</picture>
+**Arquitetura** fronteiras orientadas a domínio · integração orientada a eventos · modernização de legado · registros de decisão
+**Backend** Java · Go · TypeScript/Node.js (NestJS) · Python · PostgreSQL · Kafka · Redis
+**Plataforma** Azure · AWS · Kubernetes · Docker · Bicep/Terraform · Azure DevOps · GitHub Actions
+**IA aplicada** gateways de LLM · roteamento multi-provedor · salvaguardas de custo e segurança · desenho de avaliações
+**Liderança** padrões de engenharia · quality gates · governança de release · mentoria e contratação
 
-#### Athrya &nbsp;<sub><code>PRIVADO</code> · <code>EM DESENVOLVIMENTO</code></sub>
-Plataforma multi-tenant para academias de artes marciais: um app universal para alunos e dashboards web para a equipe.
-**Decisão:** um único monorepo TypeScript em que domínio, casos de uso e contratos vivem em pacotes compartilhados por todos os apps — a regra de negócio é escrita uma vez e aplicada igualmente no mobile, na web e na API. Tenants são configuração, não forks.
-`TypeScript` `Turborepo` `NestJS` `Prisma` `PostgreSQL` `Expo / React Native` `Next.js` `Zod` `Azure DevOps`
-
-#### Includlab &nbsp;<sub><code>EMPRESA</code> · <a href="https://includlab.com.br">includlab.com.br</a></sub>
-Minha software house: engenharia de produto, integrações e automação assistida por IA para clientes e para produtos próprios como o Athrya.
-
-#### Engineering Activity pipeline &nbsp;<sub><code>PRIVADO</code> · <code>NOVO</code></sub>
-O sistema por trás da seção 03. **Problema:** a maior parte do meu trabalho acontece em repositórios privados no Azure DevOps, invisíveis ao GitHub. **Decisão:** espelhamento unidirecional, apenas fast-forward, de repositórios explicitamente aprovados para repositórios privados no GitHub — SHAs, autores e datas originais preservados, scan de segredos antes de qualquer push, visibilidade reconferida antes de cada push — e um coletor que deduplica por SHA e publica só um JSON agregado e validado por schema.
-`Python` `GitHub API` `Azure DevOps REST` `gitleaks` `GitHub Actions`
-
-<sub>Trabalhos públicos anteriores: <a href="https://github.com/CelioGuimaraes117/NoteApp-master">NoteApp</a> (React, Redux, Material UI) · <a href="https://github.com/CelioGuimaraes117/themesDiscord">themesDiscord</a> (CSS).</sub>
-
-<br>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/sections/05-principles-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/sections/05-principles-light.svg">
-  <img alt="05 — Principles" src="assets/sections/05-principles-dark.svg" width="520">
-</picture>
-
-1. **Simplicidade primeiro.** A melhor arquitetura é a menor que sobrevive aos próximos dois anos de requisitos.
-2. **Decisões verificáveis.** Toda escolha relevante tem registro, motivo e um jeito de saber se estava errada.
-3. **Escala se projeta.** Fronteiras, back-pressure e posse dos dados vêm antes da infraestrutura.
-4. **Observável por padrão.** Se não pode ser medido em produção, não está pronto.
-5. **Seguro por construção.** Menor privilégio, segredos fora do código, ameaças avaliadas no design.
-6. **Manutenibilidade é requisito.** O código é lido pelo próximo engenheiro muito mais vezes do que é escrito.
-7. **Clareza acima de esperteza.** No código, nos documentos e na conversa com o negócio.
-
-<br>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/sections/06-contact-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/sections/06-contact-light.svg">
-  <img alt="06 — Contact" src="assets/sections/06-contact-dark.svg" width="520">
-</picture>
+## Contato
 
 [LinkedIn](https://www.linkedin.com/in/celioguimaraes117) · [celio@includlab.com.br](mailto:celio@includlab.com.br) · [Includlab](https://includlab.com.br) · [Links](https://linktr.ee/celio_rguimaraes)
 
 No Brasil · trabalho remoto · português, inglês, espanhol.
-
-<br>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/brand/signature-dark.svg">

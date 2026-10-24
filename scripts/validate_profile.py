@@ -19,7 +19,8 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DOCS = ["README.md", "README.pt-BR.md"]
+DOCS = ["README.md", "README.pt-BR.md"] + sorted(str(p.relative_to(Path(__file__).resolve().parents[1]))
+                                              for p in (Path(__file__).resolve().parents[1] / "cases").glob("*.md"))
 DENY = set("""
 ca75da6440157fbde152a87b 73e6154f5c80baf95e012453 e763d2a097597014d37688bf 84c7497f72a364dbd11636dd
 cd8bbe178dfb278ae17ec0d2 ae849dec36ce103cf4a4778f fa822a2a83e4843af71df104 09813a4dd3a2015cbff51aeb
@@ -68,10 +69,10 @@ def check_docs() -> list[str]:
                 if ref.startswith("http://"):
                     err(f"{doc}: insecure link {ref}")
                 links.append(ref)
-            elif not (ROOT / ref.split("#")[0]).exists():
+            elif not ((ROOT / doc).parent / ref.split("#")[0]).exists():
                 err(f"{doc}: broken relative reference {ref}")
         for dark in re.findall(r'srcset="([^"]+-dark\.svg)"', text):
-            if not (ROOT / dark.replace("-dark.svg", "-light.svg")).exists():
+            if not ((ROOT / doc).parent / dark.replace("-dark.svg", "-light.svg")).exists():
                 err(f"{doc}: {dark} has no light variant")
     return links
 
