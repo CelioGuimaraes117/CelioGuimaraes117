@@ -6,7 +6,7 @@
 
 <p align="right"><a href="README.md">English</a> | <b>Português (Brasil)</b></p>
 
-**Arquiteto de Software · Tech Lead · Engenharia de IA Aplicada.** Projeto plataformas, levo-as à produção e construo sistemas de IA com as salvaguardas que eles exigem. Mais de 7 anos em bancos, telecom, área fiscal pública e plataformas corporativas; hoje lidero a entrega técnica em projetos de clientes e construo produtos na [Includlab](https://includlab.com.br), minha software house.
+**Tech Lead · Arquiteto de Software · Cloud e IA aplicada · Sistemas Distribuídos · Engenharia de Backend e Plataformas.** Projeto plataformas, levo-as à produção e construo sistemas de IA com as salvaguardas que eles exigem. Mais de 8 anos de experiência em bancos, telecom, área fiscal pública e plataformas corporativas; hoje lidero a entrega técnica em projetos de clientes e construo produtos na [Includlab](https://includlab.com.br), minha software house.
 
 <sub>O código-fonte dos sistemas abaixo é privado. Aqui aparecem visões de arquitetura sanitizadas, estado verificável e métricas agregadas — nunca a implementação.</sub>
 
@@ -89,11 +89,11 @@ A maior parte do meu trabalho vive em repositórios privados no Azure DevOps. Es
 
 ## Tecnologia e liderança
 
-- **Arquitetura** fronteiras orientadas a domínio · integração orientada a eventos · modernização de legado · registros de decisão
+- **Arquitetura** sistemas distribuídos · microsserviços · fronteiras orientadas a domínio · integração orientada a eventos · modernização de legado · registros de decisão
 - **Backend** Java · Go · TypeScript/Node.js (NestJS) · Python · PostgreSQL · Kafka · Redis
-- **Plataforma** Azure · AWS · Kubernetes · Docker · Bicep/Terraform · Azure DevOps · GitHub Actions
-- **IA aplicada** gateways de LLM · roteamento multi-provedor · salvaguardas de custo e segurança · desenho de avaliações
-- **Liderança** padrões de engenharia · quality gates · governança de release · mentoria e contratação
+- **Plataforma** Azure · AWS · Kubernetes · Docker · Bicep/Terraform · Azure DevOps · GitHub Actions · CI/CD · observabilidade
+- **IA aplicada** agentes de IA · integração de LLMs · gateways de LLM · roteamento multi-provedor · salvaguardas de custo e segurança · desenho de avaliações
+- **Liderança** direção técnica hands-on · padrões de engenharia · quality gates · governança de release · mentoria e contratação
 
 ## Contato
 
