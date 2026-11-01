@@ -6,7 +6,7 @@
 
 <p align="right"><b>English</b> | <a href="README.pt-BR.md">Português (Brasil)</a></p>
 
-**Software Architect · Tech Lead · Applied AI Engineering.** I design platforms, take them to production and build AI systems with the guardrails they need. 7+ years in banking, telecom, public-sector tax and enterprise platforms; today I lead technical delivery on client engagements and build products at [Includlab](https://includlab.com.br), my software house.
+**Tech Lead · Software Architect · Cloud & Applied AI · Distributed Systems · Backend & Platform Engineering.** I design platforms, take them to production and build AI systems with the guardrails they need. 8+ years in banking, telecom, public-sector tax and enterprise platforms; today I lead technical delivery on client engagements and build products at [Includlab](https://includlab.com.br), my software house.
 
 <sub>The source code of the systems below is private. What is shown here are sanitized architecture views, verifiable status and aggregate metrics, never the implementation.</sub>
 
@@ -89,11 +89,11 @@ Most of my work lives in private Azure DevOps repositories. This platform makes 
 
 ## Technology & leadership
 
-- **Architecture** domain-driven boundaries · event-driven integration · legacy modernization · decision records
+- **Architecture** distributed systems · microservices · domain-driven boundaries · event-driven integration · legacy modernization · decision records
 - **Backend** Java · Go · TypeScript/Node.js (NestJS) · Python · PostgreSQL · Kafka · Redis
-- **Platform** Azure · AWS · Kubernetes · Docker · Bicep/Terraform · Azure DevOps · GitHub Actions
-- **Applied AI** LLM gateways · multi-provider routing · cost and safety guardrails · evaluation design
-- **Leadership** engineering standards · quality gates · release governance · mentoring and hiring
+- **Platform** Azure · AWS · Kubernetes · Docker · Bicep/Terraform · Azure DevOps · GitHub Actions · CI/CD · observability
+- **Applied AI** AI agents · LLM integration · LLM gateways · multi-provider routing · cost and safety guardrails · evaluation design
+- **Leadership** hands-on technical direction · engineering standards · quality gates · release governance · mentoring and hiring
 
 ## Contact
 
