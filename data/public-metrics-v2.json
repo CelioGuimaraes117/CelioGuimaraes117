@@ -1,6 +1,6 @@
 {
   "schema": "cea.public/v2",
-  "generated_on": "2026-10-26",
+  "generated_on": "2026-11-02",
   "collection": {
     "status": "complete",
     "scope": "all accessible refs; Azure DevOps (private, aggregated) + GitHub owned repositories",
@@ -10,75 +10,75 @@
   "periods": {
     "7d": {
       "git": {
-        "owner_authored_shas": 331,
-        "owner_committed_shas": 324,
-        "default_branch_shas": 101,
-        "other_live_branch_only_shas": 150,
-        "deleted_branch_recovered_shas": 80,
-        "pr_shas": 117,
-        "merge_commit_shas": 76,
+        "owner_authored_shas": 2,
+        "owner_committed_shas": 0,
+        "default_branch_shas": 1,
+        "other_live_branch_only_shas": 1,
+        "deleted_branch_recovered_shas": 0,
+        "pr_shas": 0,
+        "merge_commit_shas": 0,
         "unrecoverable_shas": 0
       },
       "sources": {
-        "github_only": 83,
+        "github_only": 2,
         "azure_devops_only": 0,
-        "both": 248,
-        "consolidated": 331
+        "both": 0,
+        "consolidated": 2
       },
       "delivery": {
-        "prs_created": 26,
-        "prs_completed": 24,
+        "prs_created": 1,
+        "prs_completed": 1,
         "prs_abandoned": 0,
-        "prs_open": 2,
+        "prs_open": 0,
         "prs_reviewed": 0,
-        "squash_merges": 18,
-        "median_hours_to_merge": 1.5
+        "squash_merges": 0,
+        "median_hours_to_merge": 0.1
       },
       "contributions": {
-        "official_total": 111,
-        "eligible_mirrored_commits": 19,
-        "calendar_upper_bound": 19,
+        "official_total": 2,
+        "eligible_mirrored_commits": 0,
+        "calendar_upper_bound": 0,
         "pending_on_calendar": 0
       }
     },
     "30d": {
       "git": {
-        "owner_authored_shas": 1876,
-        "owner_committed_shas": 1869,
-        "default_branch_shas": 219,
-        "other_live_branch_only_shas": 571,
-        "deleted_branch_recovered_shas": 1086,
-        "pr_shas": 1061,
-        "merge_commit_shas": 542,
+        "owner_authored_shas": 1136,
+        "owner_committed_shas": 1128,
+        "default_branch_shas": 161,
+        "other_live_branch_only_shas": 488,
+        "deleted_branch_recovered_shas": 487,
+        "pr_shas": 569,
+        "merge_commit_shas": 282,
         "unrecoverable_shas": 0
       },
       "sources": {
-        "github_only": 83,
+        "github_only": 84,
         "azure_devops_only": 0,
-        "both": 1793,
-        "consolidated": 1876
+        "both": 1052,
+        "consolidated": 1136
       },
       "delivery": {
-        "prs_created": 149,
-        "prs_completed": 145,
-        "prs_abandoned": 2,
+        "prs_created": 87,
+        "prs_completed": 85,
+        "prs_abandoned": 0,
         "prs_open": 2,
         "prs_reviewed": 0,
-        "squash_merges": 139,
-        "median_hours_to_merge": 1.6
+        "squash_merges": 78,
+        "median_hours_to_merge": 1.4
       },
       "contributions": {
-        "official_total": 231,
-        "eligible_mirrored_commits": 137,
-        "calendar_upper_bound": 137,
+        "official_total": 177,
+        "eligible_mirrored_commits": 78,
+        "calendar_upper_bound": 78,
         "pending_on_calendar": 0
       }
     },
     "12m": {
       "git": {
-        "owner_authored_shas": 4353,
-        "owner_committed_shas": 4156,
-        "default_branch_shas": 1030,
+        "owner_authored_shas": 4348,
+        "owner_committed_shas": 4150,
+        "default_branch_shas": 1025,
         "other_live_branch_only_shas": 871,
         "deleted_branch_recovered_shas": 2452,
         "pr_shas": 2177,
@@ -86,43 +86,10 @@
         "unrecoverable_shas": 0
       },
       "sources": {
-        "github_only": 911,
+        "github_only": 906,
         "azure_devops_only": 1,
         "both": 3441,
-        "consolidated": 4353
-      },
-      "delivery": {
-        "prs_created": 542,
-        "prs_completed": 510,
-        "prs_abandoned": 30,
-        "prs_open": 2,
-        "prs_reviewed": 5,
-        "squash_merges": 385,
-        "median_hours_to_merge": 0.5
-      },
-      "contributions": {
-        "official_total": 1166,
-        "eligible_mirrored_commits": 237,
-        "calendar_upper_bound": 213,
-        "pending_on_calendar": 24
-      }
-    },
-    "all": {
-      "git": {
-        "owner_authored_shas": 4396,
-        "owner_committed_shas": 4156,
-        "default_branch_shas": 1072,
-        "other_live_branch_only_shas": 872,
-        "deleted_branch_recovered_shas": 2452,
-        "pr_shas": 2177,
-        "merge_commit_shas": 1085,
-        "unrecoverable_shas": 0
-      },
-      "sources": {
-        "github_only": 954,
-        "azure_devops_only": 1,
-        "both": 3441,
-        "consolidated": 4396
+        "consolidated": 4348
       },
       "delivery": {
         "prs_created": 543,
@@ -134,7 +101,40 @@
         "median_hours_to_merge": 0.5
       },
       "contributions": {
-        "official_total": 1226,
+        "official_total": 1162,
+        "eligible_mirrored_commits": 237,
+        "calendar_upper_bound": 213,
+        "pending_on_calendar": 24
+      }
+    },
+    "all": {
+      "git": {
+        "owner_authored_shas": 4397,
+        "owner_committed_shas": 4156,
+        "default_branch_shas": 1073,
+        "other_live_branch_only_shas": 872,
+        "deleted_branch_recovered_shas": 2452,
+        "pr_shas": 2177,
+        "merge_commit_shas": 1085,
+        "unrecoverable_shas": 0
+      },
+      "sources": {
+        "github_only": 955,
+        "azure_devops_only": 1,
+        "both": 3441,
+        "consolidated": 4397
+      },
+      "delivery": {
+        "prs_created": 544,
+        "prs_completed": 512,
+        "prs_abandoned": 30,
+        "prs_open": 2,
+        "prs_reviewed": 5,
+        "squash_merges": 385,
+        "median_hours_to_merge": 0.5
+      },
+      "contributions": {
+        "official_total": 1228,
         "eligible_mirrored_commits": 237,
         "calendar_upper_bound": 213,
         "pending_on_calendar": 24
@@ -142,11 +142,6 @@
     }
   },
   "monthly": [
-    {
-      "month": "2025-11",
-      "default_branch": 1,
-      "other_refs": 0
-    },
     {
       "month": "2025-12",
       "default_branch": 14,
@@ -201,6 +196,11 @@
       "month": "2026-10",
       "default_branch": 174,
       "other_refs": 1227
+    },
+    {
+      "month": "2026-11",
+      "default_branch": 1,
+      "other_refs": 0
     }
   ],
   "languages": [
