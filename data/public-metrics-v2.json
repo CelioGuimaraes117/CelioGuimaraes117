@@ -1,6 +1,6 @@
 {
   "schema": "cea.public/v2",
-  "generated_on": "2026-11-02",
+  "generated_on": "2026-11-09",
   "collection": {
     "status": "complete",
     "scope": "all accessible refs; Azure DevOps (private, aggregated) + GitHub owned repositories",
@@ -10,133 +10,133 @@
   "periods": {
     "7d": {
       "git": {
-        "owner_authored_shas": 2,
-        "owner_committed_shas": 0,
-        "default_branch_shas": 1,
-        "other_live_branch_only_shas": 1,
-        "deleted_branch_recovered_shas": 0,
-        "pr_shas": 0,
-        "merge_commit_shas": 0,
+        "owner_authored_shas": 207,
+        "owner_committed_shas": 197,
+        "default_branch_shas": 28,
+        "other_live_branch_only_shas": 130,
+        "deleted_branch_recovered_shas": 49,
+        "pr_shas": 82,
+        "merge_commit_shas": 48,
         "unrecoverable_shas": 0
       },
       "sources": {
-        "github_only": 2,
-        "azure_devops_only": 0,
-        "both": 0,
-        "consolidated": 2
+        "github_only": 58,
+        "azure_devops_only": 31,
+        "both": 118,
+        "consolidated": 207
       },
       "delivery": {
-        "prs_created": 1,
-        "prs_completed": 1,
-        "prs_abandoned": 0,
-        "prs_open": 0,
+        "prs_created": 27,
+        "prs_completed": 24,
+        "prs_abandoned": 2,
+        "prs_open": 1,
         "prs_reviewed": 0,
-        "squash_merges": 0,
-        "median_hours_to_merge": 0.1
+        "squash_merges": 16,
+        "median_hours_to_merge": 2.0
       },
       "contributions": {
-        "official_total": 2,
-        "eligible_mirrored_commits": 0,
-        "calendar_upper_bound": 0,
+        "official_total": 39,
+        "eligible_mirrored_commits": 14,
+        "calendar_upper_bound": 14,
         "pending_on_calendar": 0
       }
     },
     "30d": {
       "git": {
-        "owner_authored_shas": 1136,
-        "owner_committed_shas": 1128,
+        "owner_authored_shas": 1094,
+        "owner_committed_shas": 1077,
         "default_branch_shas": 161,
-        "other_live_branch_only_shas": 488,
-        "deleted_branch_recovered_shas": 487,
-        "pr_shas": 569,
-        "merge_commit_shas": 282,
+        "other_live_branch_only_shas": 618,
+        "deleted_branch_recovered_shas": 315,
+        "pr_shas": 487,
+        "merge_commit_shas": 242,
         "unrecoverable_shas": 0
       },
       "sources": {
-        "github_only": 84,
-        "azure_devops_only": 0,
-        "both": 1052,
-        "consolidated": 1136
+        "github_only": 141,
+        "azure_devops_only": 31,
+        "both": 922,
+        "consolidated": 1094
       },
       "delivery": {
-        "prs_created": 87,
-        "prs_completed": 85,
-        "prs_abandoned": 0,
+        "prs_created": 86,
+        "prs_completed": 82,
+        "prs_abandoned": 2,
         "prs_open": 2,
         "prs_reviewed": 0,
-        "squash_merges": 78,
-        "median_hours_to_merge": 1.4
+        "squash_merges": 67,
+        "median_hours_to_merge": 1.7
       },
       "contributions": {
-        "official_total": 177,
-        "eligible_mirrored_commits": 78,
-        "calendar_upper_bound": 78,
+        "official_total": 183,
+        "eligible_mirrored_commits": 64,
+        "calendar_upper_bound": 64,
         "pending_on_calendar": 0
       }
     },
     "12m": {
       "git": {
-        "owner_authored_shas": 4348,
-        "owner_committed_shas": 4150,
-        "default_branch_shas": 1025,
-        "other_live_branch_only_shas": 871,
-        "deleted_branch_recovered_shas": 2452,
-        "pr_shas": 2177,
-        "merge_commit_shas": 1085,
+        "owner_authored_shas": 4555,
+        "owner_committed_shas": 4348,
+        "default_branch_shas": 1053,
+        "other_live_branch_only_shas": 1001,
+        "deleted_branch_recovered_shas": 2501,
+        "pr_shas": 2262,
+        "merge_commit_shas": 1133,
         "unrecoverable_shas": 0
       },
       "sources": {
-        "github_only": 906,
-        "azure_devops_only": 1,
-        "both": 3441,
-        "consolidated": 4348
+        "github_only": 963,
+        "azure_devops_only": 32,
+        "both": 3560,
+        "consolidated": 4555
       },
       "delivery": {
-        "prs_created": 543,
-        "prs_completed": 511,
-        "prs_abandoned": 30,
+        "prs_created": 570,
+        "prs_completed": 536,
+        "prs_abandoned": 32,
         "prs_open": 2,
         "prs_reviewed": 5,
-        "squash_merges": 385,
+        "squash_merges": 402,
         "median_hours_to_merge": 0.5
       },
       "contributions": {
-        "official_total": 1162,
-        "eligible_mirrored_commits": 237,
-        "calendar_upper_bound": 213,
+        "official_total": 1201,
+        "eligible_mirrored_commits": 251,
+        "calendar_upper_bound": 227,
         "pending_on_calendar": 24
       }
     },
     "all": {
       "git": {
-        "owner_authored_shas": 4397,
-        "owner_committed_shas": 4156,
-        "default_branch_shas": 1073,
-        "other_live_branch_only_shas": 872,
-        "deleted_branch_recovered_shas": 2452,
-        "pr_shas": 2177,
-        "merge_commit_shas": 1085,
+        "owner_authored_shas": 4604,
+        "owner_committed_shas": 4354,
+        "default_branch_shas": 1101,
+        "other_live_branch_only_shas": 1002,
+        "deleted_branch_recovered_shas": 2501,
+        "pr_shas": 2262,
+        "merge_commit_shas": 1133,
         "unrecoverable_shas": 0
       },
       "sources": {
-        "github_only": 955,
-        "azure_devops_only": 1,
-        "both": 3441,
-        "consolidated": 4397
+        "github_only": 1012,
+        "azure_devops_only": 32,
+        "both": 3560,
+        "consolidated": 4604
       },
       "delivery": {
-        "prs_created": 544,
-        "prs_completed": 512,
-        "prs_abandoned": 30,
+        "prs_created": 571,
+        "prs_completed": 537,
+        "prs_abandoned": 32,
         "prs_open": 2,
         "prs_reviewed": 5,
-        "squash_merges": 385,
+        "squash_merges": 402,
         "median_hours_to_merge": 0.5
       },
       "contributions": {
-        "official_total": 1228,
-        "eligible_mirrored_commits": 237,
-        "calendar_upper_bound": 213,
+        "official_total": 1267,
+        "eligible_mirrored_commits": 251,
+        "calendar_upper_bound": 227,
         "pending_on_calendar": 24
       }
     }
@@ -199,38 +199,38 @@
     },
     {
       "month": "2026-11",
-      "default_branch": 1,
-      "other_refs": 0
+      "default_branch": 29,
+      "other_refs": 179
     }
   ],
   "languages": [
     {
       "name": "TypeScript",
-      "share": 0.8402
+      "share": 0.8334
     },
     {
       "name": "JavaScript",
-      "share": 0.0832
+      "share": 0.0891
     },
     {
       "name": "Python",
-      "share": 0.031
+      "share": 0.0308
     },
     {
       "name": "PLpgSQL",
-      "share": 0.0138
+      "share": 0.0154
     },
     {
       "name": "Go",
-      "share": 0.0104
+      "share": 0.0103
     },
     {
       "name": "HTML",
-      "share": 0.006
+      "share": 0.0059
     },
     {
       "name": "Other",
-      "share": 0.0154
+      "share": 0.0152
     }
   ],
   "definitions": {
