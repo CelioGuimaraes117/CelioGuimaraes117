@@ -19,7 +19,7 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DOCS = ["README.md", "README.pt-BR.md"] + sorted(str(p.relative_to(Path(__file__).resolve().parents[1]))
+DOCS = ["README.md", "README.pt-BR.md", "README.es.md"] + sorted(str(p.relative_to(Path(__file__).resolve().parents[1]))
                                               for p in (Path(__file__).resolve().parents[1] / "cases").glob("*.md"))
 DENY = set("""
 ca75da6440157fbde152a87b 73e6154f5c80baf95e012453 e763d2a097597014d37688bf 84c7497f72a364dbd11636dd
@@ -224,6 +224,84 @@ def check_i18n() -> None:
             err(f"dashboard parity: {en_svg.name} and {pt_svg.name} show different numbers")
 
 
+LANGS = (("en", "English"), ("pt-BR", "Português (Brasil)"), ("es", "Español"))
+PUBLIC_EMAIL = "celio@includlab.com.br"      # the only address the profile publishes (also in README.md and README.pt-BR.md)
+SECRET_SHAPES = re.compile(
+    r"AKIA[0-9A-Z]{16}|gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,}|xox[abprs]-[A-Za-z0-9-]{10,}"
+    r"|sk-[A-Za-z0-9]{20,}|-----BEGIN [A-Z ]*PRIVATE KEY|(?i:(?:password|passwd|secret|token|api[_-]?key)\s*[:=]\s*\S{8,})")
+PHONE_SHAPE = re.compile(r"(?<![\w.-])\+?\d{1,3}[\s.-]?\(?\d{2,3}\)?[\s.-]?\d{4,5}[\s.-]\d{4}(?![\w.-])")
+SPANISH_HINT = re.compile(r"[áéíóúñ¿¡]|\b(de|del|la|el|los|las|con|en|y)\b")
+
+
+def selector(active: str, stem: str) -> str:
+    """Language selector HTML. stem is "README" for the profile pages or the case name for case pages."""
+    def href(code: str) -> str:
+        if stem == "README":
+            return "README.md" if code == "en" else f"README.{code}.md"
+        return f"{stem}.{code}.md"
+    return " | ".join(f"<b>{label}</b>" if code == active else f'<a href="{href(code)}">{label}</a>' for code, label in LANGS)
+
+
+def check_i18n_es() -> None:
+    """Spanish (README.es.md, cases/*.es.md) mirrors English in structure and data; the selector lists three languages."""
+    if not (ROOT / "README.es.md").exists():
+        err("missing README.es.md")
+        return
+    en, pt, es = ((ROOT / n).read_text() for n in ("README.md", "README.pt-BR.md", "README.es.md"))
+    for name, text, code in (("README.md", en, "en"), ("README.pt-BR.md", pt, "pt-BR"), ("README.es.md", es, "es")):
+        if f'<p align="right">{selector(code, "README")}</p>' not in text:
+            err(f"{name}: three-language selector missing or wrong language marked active")
+    for what, rx in (("sections", r"^#{2,3} "), ("pictures", r"<picture>"), ("case links", r"cases/[a-z-]+\.(?:en|pt-BR|es)\.md")):
+        a, b = len(re.findall(rx, en, re.M)), len(re.findall(rx, es, re.M))
+        if a != b:
+            err(f"README parity: {a} {what} in English vs {b} in Spanish")
+    if _numbers(en) != _numbers(es):
+        err("README parity: the numbers differ between English and Spanish")
+    if re.search(r"cases/[a-z-]+\.(?:en|pt-BR)\.md", es) or re.search(r"cases/[a-z-]+\.es\.md", en + pt):
+        err("README links a case in the wrong language (the Spanish README links only *.es.md)")
+    spanish_docs = ["README.es.md"] + [f"cases/{c.name}" for c in sorted((ROOT / "cases").glob("*.es.md"))]
+    for doc in spanish_docs:
+        text = (ROOT / doc).read_text()
+        base = (ROOT / doc).parent
+        for ref in re.findall(r'srcset="([^"]+)"', text):     # a localized (-es-) variant, when it exists, must be the one used
+            if "-es-" not in ref and (base / re.sub(r"-(dark|light)\.(svg|png)$", r"-es-\1.\2", ref)).exists():
+                err(f"{doc} uses {ref} although a Spanish variant exists")
+            if "-pt-BR-" in ref:
+                err(f"{doc} uses a Portuguese asset: {ref}")
+        for tag in re.findall(r"<img\b[^>]*>", text):
+            m = re.search(r'\salt="([^"]*)"', tag)
+            if not (m and SPANISH_HINT.search(m.group(1))):
+                err(f"{doc}: <img> alt text is not in Spanish: {tag[:80]}")
+        # Privacy: only the published contact address, no phone numbers, no secret-shaped values.
+        for mail in re.findall(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+", text):
+            if mail.lower() != PUBLIC_EMAIL or doc != "README.es.md":
+                err(f"{doc}: e-mail address not allowed here")
+        if PHONE_SHAPE.search(text):
+            err(f"{doc}: looks like a phone number")
+        if SECRET_SHAPES.search(text):
+            err(f"{doc}: looks like a secret or credential value")
+    for c in sorted((ROOT / "cases").glob("*.en.md")):
+        base = c.name[:-6]
+        esc = c.with_name(f"{base}.es.md")
+        if not esc.exists():
+            err(f"cases: {base} has no Spanish version")
+            continue
+        pages = {"en": c.read_text(), "pt-BR": (ROOT / "cases" / f"{base}.pt-BR.md").read_text(), "es": esc.read_text()}
+        for code, text in pages.items():
+            if f'<p align="right">{selector(code, base)}</p>' not in text:
+                err(f"cases/{base}.{code}.md: three-language selector missing or wrong language marked active")
+        s = pages["es"]
+        if "../README.es.md" not in s or re.search(r"\.\./README(?:\.pt-BR)?\.md", s) \
+                or "../README.es.md" in pages["en"] or "../README.es.md" in pages["pt-BR"]:
+            err(f"cases/{base}.es.md: back link must return to README.es.md, and only the Spanish page may use it")
+        if len(re.findall(r"^#{2,3} ", pages["en"], re.M)) != len(re.findall(r"^#{2,3} ", s, re.M)):
+            err(f"cases/{base}: section count differs between English and Spanish")
+        if len(re.findall(r"<picture>", pages["en"])) != len(re.findall(r"<picture>", s)):
+            err(f"cases/{base}: image count differs between English and Spanish")
+        if _numbers(pages["en"]) != _numbers(s):
+            err(f"cases/{base}: the numbers differ between English and Spanish")
+
+
 def check_links(links: list[str]) -> None:
     for url in sorted(set(links)):
         if url.startswith("mailto:"):
@@ -249,6 +327,7 @@ def main() -> int:
     check_data()
     check_data_v2()
     check_i18n()
+    check_i18n_es()
     if "--links" in sys.argv:
         check_links(links)
     for e in errors:
