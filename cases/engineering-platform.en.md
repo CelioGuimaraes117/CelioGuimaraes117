@@ -1,6 +1,6 @@
 # Engineering Platform: representing private work without falsifying it
 
-<p align="right"><b>English</b> | <a href="engineering-platform.pt-BR.md">Português (Brasil)</a></p>
+<p align="right"><b>English</b> | <a href="engineering-platform.pt-BR.md">Português (Brasil)</a> | <a href="engineering-platform.es.md">Español</a></p>
 ## Context
 
 Most of my day-to-day engineering happens in private Azure DevOps repositories. A GitHub profile shows only what GitHub can see, so those commits, pull requests and reviews were invisible there. Copying code, rewriting history or re-authoring commits would misrepresent the work.
