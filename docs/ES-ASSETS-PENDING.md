@@ -38,7 +38,15 @@ Not referenced by any README today (no Spanish variant needed): `assets/sections
    `-es-` variant exists, so a forgotten swap is caught.
 3. Extend the dashboard parity rule (`check_i18n`, `<desc>` numbers) to the `-es-` files.
 
-## Other pending item
+## Status (16 Nov 2026)
 
-The site `https://www.celiocrisologo.com.br/es` answers 404 (checked on 14 Nov 2026), so the Spanish
-README links the English portfolio page. Switch to `/es` when it exists.
+- Portfolio: `https://www.celiocrisologo.com.br/es` is published and answers 200 (checked on 16 Nov 2026);
+  `README.es.md` links to it.
+- Dashboards (`metrics/v2/*-es-*`): the renderer gained the Spanish locale in the collector (pull request
+  pending its independent audit). The files only appear in this repository after the metrics workflow,
+  which stays disabled until the reconciled numbers are approved.
+- Hero and case diagrams: the generator that produced the English and Portuguese files was not found
+  (searched the three repositories and their Git history, the brand folder and the usual workspaces; the
+  original commits came from a cloud session whose scripts were never versioned). Until a reproducible
+  generator exists and the Spanish images are approved, the English images stay, with Spanish `alt` text.
+- PNG screenshots: must be recaptured with fictional data, never edited.
