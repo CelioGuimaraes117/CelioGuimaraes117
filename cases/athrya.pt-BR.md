@@ -1,6 +1,6 @@
 # Athrya — uma plataforma multi-tenant para academias de artes marciais
 
-<p align="right"><a href="athrya.en.md">English</a> | <b>Português (Brasil)</b></p>
+<p align="right"><a href="athrya.en.md">English</a> | <b>Português (Brasil)</b> | <a href="athrya.es.md">Español</a></p>
 
 ## Contexto
 

@@ -4,7 +4,7 @@
   <img alt="Célio Crisólogo — Arquiteto de Software, Tech Lead, Engenharia de IA Aplicada. Arquiteto sistemas. Construo produtos. Projeto inteligência." src="assets/banners/hero-animated-pt-BR-dark.svg" width="100%">
 </picture>
 
-<p align="right"><a href="README.md">English</a> | <b>Português (Brasil)</b></p>
+<p align="right"><a href="README.md">English</a> | <b>Português (Brasil)</b> | <a href="README.es.md">Español</a></p>
 
 **Tech Lead · Arquiteto de Software · Cloud e IA aplicada · Sistemas Distribuídos · Engenharia de Backend e Plataformas.** Projeto plataformas, levo-as à produção e construo sistemas de IA com as salvaguardas que eles exigem. Mais de 8 anos de experiência em bancos, telecom, área fiscal pública e plataformas corporativas; hoje lidero a entrega técnica em projetos de clientes e construo produtos na [Includlab](https://includlab.com.br), minha software house.
 

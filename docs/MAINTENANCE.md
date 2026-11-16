@@ -2,7 +2,7 @@
 
 ## Edit the text
 
-Edit `README.md` and `README.pt-BR.md` together, then run:
+Edit `README.md`, `README.pt-BR.md` and `README.es.md` together (and the matching `cases/*.{en,pt-BR,es}.md`; see `docs/I18N-ES.md`), then run:
 
 ```sh
 python3 -I scripts/validate_profile.py --links
